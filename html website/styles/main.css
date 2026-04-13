@@ -309,6 +309,12 @@ button { font-family: var(--font-main); border: none; background: none; cursor: 
   border-radius: var(--radius-xs);
 }
 
+/* ── Shared site CTA section (all pages except contact) ──── */
+.site-cta-section {
+  padding-block: var(--space-32);
+  border-top: 1px solid var(--color-border);
+}
+
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 768px) {
   :root {
