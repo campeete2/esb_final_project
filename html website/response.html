@@ -52,6 +52,12 @@
                         Thanks for reaching out to Empty Sandbox. We've received your submission and will be in touch within one business day to schedule your discovery call.
                     </p>
 
+                    <!-- Submission Summary (populated from sessionStorage) -->
+                    <div class="response-next-card" id="submission-summary" style="display:none;">
+                        <h5>Your Submission</h5>
+                        <div id="submission-details" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
+                    </div>
+
                     <!-- What happens next -->
                     <div class="response-next-card">
                         <h5>What happens next</h5>
@@ -116,6 +122,52 @@
     <script src="helpers/main.js"></script>
     <script>
         document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // ── Read submission from sessionStorage and render summary ──
+        var raw = sessionStorage.getItem('esb_submission');
+        if (raw) {
+            try {
+                var sub = JSON.parse(raw);
+                var details = document.getElementById('submission-details');
+                var summary = document.getElementById('submission-summary');
+
+                var fields = [
+                    { label: 'Name',         value: sub.name },
+                    { label: 'Email',        value: sub.email },
+                    { label: 'Organization', value: sub.organization || '—' },
+                    { label: 'Project Type', value: sub.project_type },
+                    { label: 'Budget',       value: sub.budget },
+                    { label: 'Message',      value: sub.message }
+                ];
+
+                fields.forEach(function(f) {
+                    if (!f.value) return;
+                    var row = document.createElement('div');
+                    row.style.cssText = 'display:flex;flex-direction:column;gap:2px;padding-bottom:0.6rem;border-bottom:1px solid var(--color-border);';
+                    row.innerHTML =
+                        '<span style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);">' +
+                        escHtml(f.label) + '</span>' +
+                        '<span style="font-size:var(--text-sm);color:var(--color-text-primary);line-height:1.55;">' +
+                        escHtml(f.value) + '</span>';
+                    details.appendChild(row);
+                });
+
+                summary.style.display = 'block';
+
+                // Clear so refreshing the page doesn't re-show stale data
+                sessionStorage.removeItem('esb_submission');
+            } catch (e) {
+                console.warn('Could not parse submission data:', e);
+            }
+        }
+
+        function escHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
     </script>
 </body>
 </html>
