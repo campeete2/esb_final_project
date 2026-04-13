@@ -23,15 +23,39 @@
                 <span class="site-logo__text">Empty Sandbox</span>
             </a>
             <nav id="main-menu" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                <ul class="nav-pill-group">
                     <li><a href="work.html">Work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-            <div class="header-cta">
-                <a href="contact.html" class="btn btn--primary" id="header-cta-btn">Book a Call</a>
+            <div class="header-right">
+                <a href="contact.html" class="btn btn--primary header-cta-desktop" id="header-cta-btn">Book a Call</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                        <span class="site-logo__text">Empty Sandbox</span>
+                    </a>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation">&#x2715;</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="mobile-cta-btn">Book a Call</a>
             </div>
         </div>
     </header>
