@@ -1,53 +1,47 @@
 /* ============================================================
-   EMPTY SANDBOX — RESPONSE/CONFIRMATION PAGE CSS
+   EMPTY SANDBOX — RESPONSE PAGE CSS (Editorial)
    ============================================================ */
 
-/* ── Response Section ───────────────────────────────────────── */
 #response-content {
-  min-height: calc(100vh - var(--header-height) - 280px);
+  min-height: calc(100vh - var(--header-height) - 240px);
   display: flex;
   align-items: center;
 }
 
 #response-main {
-  padding-block: var(--space-24);
+  padding-block: var(--space-32);
   width: 100%;
 }
 
 .response-inner {
-  max-width: 560px;
+  max-width: 520px;
   margin-inline: auto;
   text-align: center;
 }
 
-/* Checkmark icon */
 .response-icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background-color: var(--color-accent-light);
-  border: 2px solid rgba(168, 85, 247, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xl);
+  color: var(--color-accent);
   margin-bottom: var(--space-6);
-  font-size: 2rem;
   animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 @keyframes popIn {
-  from { transform: scale(0.5); opacity: 0; }
+  from { transform: scale(0.6); opacity: 0; }
   to   { transform: scale(1);   opacity: 1; }
 }
 
 .response-inner h1 {
-  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
-  margin-bottom: var(--space-4);
+  font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+  font-weight: var(--weight-light);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-5);
 }
 
-.response-inner .response-subtext {
-  font-size: var(--text-lg);
+.response-subtext {
+  font-size: var(--text-base);
+  font-weight: var(--weight-light);
   color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: var(--space-8);
@@ -55,33 +49,30 @@
   margin-inline: auto;
 }
 
-/* What Happens Next card */
 .response-next-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   padding: var(--space-6);
   text-align: left;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
 }
 
 .response-next-card h5 {
-  font-size: var(--text-sm);
-  font-weight: var(--weight-semibold);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-muted);
   margin-bottom: var(--space-4);
 }
 
 .response-next-steps {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: next-counter;
+  counter-reset: step-counter;
 }
 
 .response-next-steps li {
@@ -89,43 +80,35 @@
   align-items: flex-start;
   gap: var(--space-3);
   font-size: var(--text-sm);
+  font-weight: var(--weight-light);
   color: var(--color-text-secondary);
   line-height: 1.6;
-  counter-increment: next-counter;
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  counter-increment: step-counter;
 }
 
+.response-next-steps li:last-child { border-bottom: none; }
+
 .response-next-steps li::before {
-  content: counter(next-counter);
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  color: #FFFFFF;
+  content: counter(step-counter);
+  font-family: var(--font-mono);
   font-size: var(--text-xs);
-  font-weight: var(--weight-bold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--color-text-muted);
   flex-shrink: 0;
-  margin-top: 2px;
+  padding-top: 2px;
+  min-width: 14px;
 }
 
 .response-actions {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   flex-wrap: wrap;
 }
 
 @media (max-width: 480px) {
-  .response-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .response-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
+  .response-actions { flex-direction: column; width: 100%; }
+  .response-actions .btn { width: 100%; justify-content: center; }
 }
