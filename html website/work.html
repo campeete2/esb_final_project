@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/work.css">
+    <link rel="stylesheet" href="styles/exit-popup.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/logo/emptysandbox-icon.svg" type="image/svg+xml">
     <link rel="preload" href="https://images.ctfassets.net/zdahadqndvwb/aTdjjkgBcQpmNyE3xkjfz/8e5479681f9d378bc77d112612e5a80c/emptysandbox-icon.svg" as="image" fetchpriority="high">
@@ -94,10 +95,25 @@
             </div>
         </div>
 
-        <!-- PORTFOLIO GRID ───────────────────── -->
+        <!-- PORTFOLIO LAYOUT: sidebar filter + grid -->
         <section id="portfolio-grid">
             <div class="container">
-                <div class="portfolio-grid">
+                <div class="portfolio-layout">
+
+                    <!-- LEFT: Filter sidebar -->
+                    <aside class="filter-sidebar" aria-label="Filter portfolio">
+                        <span class="filter-label">Filter</span>
+                        <ul class="filter-sidebar-list" role="group">
+                            <li><button class="filter-btn active" data-filter="all" id="filter-all">All Work</button></li>
+                            <li><button class="filter-btn" data-filter="mvp" id="filter-mvp">MVP Build</button></li>
+                            <li><button class="filter-btn" data-filter="transform" id="filter-transform">Digital Transformation</button></li>
+                            <li><button class="filter-btn" data-filter="tooling" id="filter-tooling">Custom Tooling</button></li>
+                            <li><button class="filter-btn" data-filter="web" id="filter-web">Web Design</button></li>
+                        </ul>
+                    </aside>
+
+                    <!-- RIGHT: Portfolio cards -->
+                    <div class="portfolio-grid">
 
                     <!-- Featured: HighPath -->
                     <article class="portfolio-card portfolio-card--featured" data-category="mvp" data-reveal>
@@ -257,18 +273,21 @@
                         </div>
                     </article>
 
-                </div>
+                    </div><!-- /portfolio-grid -->
+                </div><!-- /portfolio-layout -->
             </div>
         </section>
 
-        <!-- WORK CTA ─────────────────────────── -->
+        <!-- WORK CTA -->
         <section id="work-cta">
             <div class="container">
-                <div class="work-cta-inner">
-                    <h2>Have a project in mind?</h2>
-                    <p>We'd love to hear about it. Book a free discovery call and let's figure out what's possible.</p>
-                    <div class="home-cta-actions">
-                        <a href="contact.html" class="btn btn--white" id="work-cta-btn">Book a Free Call &rarr;</a>
+                <div class="work-cta-card">
+                    <div class="work-cta-text">
+                        <h2>Have a project in mind?</h2>
+                        <p>We'd love to hear about it. Book a free discovery call and let's figure out what's possible.</p>
+                    </div>
+                    <div class="work-cta-actions">
+                        <a href="contact.html" class="btn btn--white" id="work-cta-btn">Book a Free Call</a>
                         <a href="pricing.html" class="btn btn--ghost" id="work-pricing-btn">See Pricing</a>
                     </div>
                 </div>
