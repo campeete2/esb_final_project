@@ -1,0 +1,55 @@
+/* ============================================================
+   EMPTY SANDBOX — PRINT STYLESHEET
+   Applied only when printing the Home page
+   ============================================================ */
+
+@media print {
+  /* Hide navigation, forms, and interactive elements */
+  #site-header,
+  #site-footer,
+  .btn,
+  .slicknav_menu {
+    display: none !important;
+  }
+
+  /* Reset backgrounds for ink saving */
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* Ensure all content is visible */
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove shadows and decorative effects */
+  .card,
+  .container,
+  section {
+    box-shadow: none !important;
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  /* Make links show their URL */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* Avoid widow lines */
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+}

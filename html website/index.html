@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty Sandbox | AI-Native Consultancy & Product Studio</title>
+    <meta name="description" content="Empty Sandbox is an AI-native consultancy and product studio that partners with early-stage founders, small businesses, and organizations to build and modernize their digital presence.">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slicknav.min.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+</head>
+<body>
+
+    <!-- ══════════════════════════════════
+         SITE HEADER / NAVIGATION
+    ══════════════════════════════════ -->
+    <header id="site-header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                <span class="site-logo__text">Empty Sandbox</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav id="main-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="header-cta">
+                <a href="contact.html" class="btn btn--primary" id="header-cta-btn">Book a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
+    <main id="home-content">
+        <!-- Content will be built in Phase 3 -->
+    </main>
+
+    <!-- ══════════════════════════════════
+         SITE FOOTER
+    ══════════════════════════════════ -->
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <a href="index.html" class="site-logo">
+                        <span class="site-logo__text"><span class="footer-accent-dot"></span>Empty Sandbox</span>
+                    </a>
+                    <p>An AI-native consultancy and product studio. We build, modernize, and transform digital products for founders, businesses, and organizations.</p>
+                </div>
+
+                <!-- Pages -->
+                <nav class="footer-nav-group" aria-label="Site Pages">
+                    <h6>Pages</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Connect -->
+                <div class="footer-nav-group">
+                    <h6>Connect</h6>
+                    <ul>
+                        <li><a href="contact.html">Book a Call</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="footer-year"></span> Empty Sandbox. All rights reserved.</p>
+                <div class="footer-accent-line"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ══════════════════════════════════
+         SCRIPTS
+    ══════════════════════════════════ -->
+    <script src="helpers/vendor/jquery.min.js"></script>
+    <script src="helpers/vendor/slicknav.min.js"></script>
+    <script src="helpers/main.js"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
