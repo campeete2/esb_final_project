@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/about.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo/emptysandbox-icon.svg" type="image/svg+xml">
+    <link rel="preload" href="https://images.ctfassets.net/zdahadqndvwb/aTdjjkgBcQpmNyE3xkjfz/8e5479681f9d378bc77d112612e5a80c/emptysandbox-icon.svg" as="image" fetchpriority="high">
 </head>
 <body>
 
@@ -20,17 +23,17 @@
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
-                <span class="site-logo__text">Empty Sandbox</span>
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
             </a>
             <nav id="main-menu" aria-label="Main Navigation">
                 <ul class="nav-pill-group">
                     <li><a href="work.html">Work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="about.html" class="active">About</a></li>
+                                    <li class="nav-cta-item"><a href="contact.html" id="header-cta-btn">Book a Call</a></li>
                 </ul>
             </nav>
             <div class="header-right">
-                <a href="contact.html" class="btn btn--primary header-cta-desktop" id="header-cta-btn">Book a Call</a>
                 <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
                     <span class="nav-toggle-bar"></span>
                     <span class="nav-toggle-bar"></span>
@@ -42,8 +45,8 @@
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
                     <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
-                        <span class="site-logo__text">Empty Sandbox</span>
-                    </a>
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+            </a>
                     <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation">&#x2715;</button>
                 </div>
                 <nav class="mobile-nav" aria-label="Mobile Navigation">
@@ -253,8 +256,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="site-logo">
-                        <span class="site-logo__text"><span class="footer-accent-dot"></span>Empty Sandbox</span>
-                    </a>
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+            </a>
                     <p>An AI-native consultancy and product studio. We build, modernize, and transform digital products for founders, businesses, and organizations.</p>
                 </div>
                 <nav class="footer-nav-group" aria-label="Site Pages">

@@ -17,10 +17,16 @@
 }
 
 /* Brand col */
-.footer-brand .site-logo__text {
-  color: #FFFFFF;
-  margin-bottom: var(--space-4);
+.footer-brand .site-logo {
   display: block;
+  margin-bottom: var(--space-4);
+}
+
+.footer-brand .site-logo__img {
+  /* Invert dark logo to white for dark footer */
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  height: 20px;
 }
 
 .footer-accent-dot {

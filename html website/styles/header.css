@@ -25,7 +25,7 @@
   height: 100%;
 }
 
-/* Logo */
+/* ── Logo ─────────────────────────────────────────────── */
 .site-logo {
   display: flex;
   align-items: center;
@@ -33,14 +33,13 @@
   flex-shrink: 0;
 }
 
-.site-logo__text {
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  color: var(--color-text-primary);
-  letter-spacing: -0.02em;
+.site-logo__img {
+  display: block;
+  height: 22px;
+  width: auto;
 }
 
-/* Desktop nav pill */
+/* ── Desktop Nav — Pill Group ──────────────────────────── */
 #main-menu {
   position: absolute;
   left: 50%;
@@ -67,6 +66,7 @@
   font-weight: var(--weight-regular);
   color: var(--color-text-secondary);
   text-decoration: none;
+  white-space: nowrap;
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
@@ -82,15 +82,31 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* Right side */
+/* CTA inside the pill */
+.nav-pill-group .nav-cta-item {
+  margin-left: var(--space-1);
+}
+
+.nav-pill-group .nav-cta-item a {
+  background-color: var(--color-text-primary);
+  color: #FFFFFF;
+  font-weight: var(--weight-medium);
+  padding: 6px 16px;
+}
+
+.nav-pill-group .nav-cta-item a:hover {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+/* ── Header Right (toggle only on desktop) ─────────────── */
 .header-right {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
   flex-shrink: 0;
 }
 
-/* Hamburger */
+/* ── Hamburger Toggle ──────────────────────────────────── */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -120,7 +136,7 @@
 .nav-toggle.is-open .nav-toggle-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-toggle.is-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* Mobile menu overlay */
+/* ── Mobile Menu Overlay ───────────────────────────────── */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -177,12 +193,7 @@
 
 .mobile-menu-close:hover { background: rgba(0,0,0,0.1); }
 
-.mobile-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+.mobile-nav ul { list-style: none; padding: 0; margin: 0; }
 .mobile-nav ul li { border-bottom: 1px solid var(--color-border); }
 
 .mobile-nav ul li a {
@@ -208,7 +219,7 @@
   background-color: var(--color-text-primary);
   color: #FFFFFF;
   padding: 0.8rem 1.5rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-pill);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   text-decoration: none;
@@ -217,10 +228,9 @@
 
 .mobile-cta-btn:hover { background-color: #333; }
 
-/* Responsive */
+/* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   #main-menu { display: none; }
-  .header-cta-desktop { display: none; }
   .nav-toggle { display: flex; }
 }
 
