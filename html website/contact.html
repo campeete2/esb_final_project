@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Empty Sandbox</title>
-    <meta name="description" content="Book a consultation with Empty Sandbox. Tell us about your project and we'll get back to you shortly.">
+    <meta name="description" content="Book a consultation with Empty Sandbox. Tell us about your project and we'll get back to you within one business day.">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/contact.css">
 </head>
 <body>
 
+    <!-- ══════════════════════════════════
+         SITE HEADER
+    ══════════════════════════════════ -->
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
@@ -32,10 +36,220 @@
         </div>
     </header>
 
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
     <main id="contact-content">
-        <!-- Formspark form will be built in Phase 5 -->
+
+        <!-- PAGE HERO ────────────────────────── -->
+        <section id="contact-hero">
+            <div class="contact-hero-orb" aria-hidden="true"></div>
+            <div class="container">
+                <div class="contact-hero-inner">
+                    <span class="section-label">Get In Touch</span>
+                    <h1>Let's talk about your project.</h1>
+                    <p>Whether you have a fully scoped idea or just a problem worth solving — fill out the form and we'll respond within one business day.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM + SIDEBAR ───────────── -->
+        <section id="contact-main">
+            <div class="container">
+                <div class="contact-layout">
+
+                    <!-- FORM CARD ──────────────── -->
+                    <div class="contact-form-card" data-reveal>
+                        <h2>Book a Discovery Call</h2>
+                        <p>Tell us what you're working on. All fields marked <span style="color:var(--color-accent);">*</span> are required.</p>
+
+                        <!--
+                            FORMSPARK INTEGRATION:
+                            Replace YOUR_FORM_ID with your actual Formspark form ID.
+                            After submission, Formspark will redirect to response.html.
+                        -->
+                        <form
+                            id="contact-form"
+                            class="contact-form"
+                            action="https://submit.formspark.io/f/YOUR_FORM_ID"
+                            method="POST"
+                            novalidate
+                        >
+                            <!-- Formspark redirect after success -->
+                            <input type="hidden" name="_redirect" value="response.html">
+
+                            <!-- Honeypot spam protection -->
+                            <input type="text" name="_honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+                            <!-- Name row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name <span class="required" aria-hidden="true">*</span></label>
+                                    <input
+                                        type="text"
+                                        id="first-name"
+                                        name="first_name"
+                                        class="form-control"
+                                        placeholder="Cameron"
+                                        required
+                                        autocomplete="given-name"
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name <span class="required" aria-hidden="true">*</span></label>
+                                    <input
+                                        type="text"
+                                        id="last-name"
+                                        name="last_name"
+                                        class="form-control"
+                                        placeholder="McCullough"
+                                        required
+                                        autocomplete="family-name"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Email & Organization row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        class="form-control"
+                                        placeholder="you@example.com"
+                                        required
+                                        autocomplete="email"
+                                    >
+                                </div>
+                                <div class="form-group">
+                                    <label for="organization">Organization / Company</label>
+                                    <input
+                                        type="text"
+                                        id="organization"
+                                        name="organization"
+                                        class="form-control"
+                                        placeholder="Acme Inc. (optional)"
+                                        autocomplete="organization"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Project type & budget row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="project-type">Project Type <span class="required" aria-hidden="true">*</span></label>
+                                    <select id="project-type" name="project_type" class="form-control" required>
+                                        <option value="" disabled selected>Select a type…</option>
+                                        <option value="mvp">MVP / New Product Build</option>
+                                        <option value="rebuild">Website Rebuild or Redesign</option>
+                                        <option value="migration">Platform Migration</option>
+                                        <option value="tooling">Custom Internal Tooling</option>
+                                        <option value="consulting">Strategy / Consulting Only</option>
+                                        <option value="other">Other / Not Sure Yet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Estimated Budget <span class="required" aria-hidden="true">*</span></label>
+                                    <select id="budget" name="budget" class="form-control" required>
+                                        <option value="" disabled selected>Select a range…</option>
+                                        <option value="under-500">Under $500</option>
+                                        <option value="500-2000">$500 – $2,000</option>
+                                        <option value="2000-5000">$2,000 – $5,000</option>
+                                        <option value="5000-plus">$5,000+</option>
+                                        <option value="unsure">Not sure yet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Tell us about your project <span class="required" aria-hidden="true">*</span></label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-control"
+                                    placeholder="Briefly describe what you're building or what problem you're trying to solve. The more context you share, the more useful our first call will be."
+                                    required
+                                    rows="5"
+                                ></textarea>
+                                <span class="form-hint">Aim for 2–4 sentences. No need to have all the answers yet!</span>
+                            </div>
+
+                            <!-- How did you hear about us -->
+                            <div class="form-group">
+                                <label for="referral">How did you hear about us?</label>
+                                <select id="referral" name="referral" class="form-control">
+                                    <option value="" disabled selected>Select one…</option>
+                                    <option value="referral">Word of mouth / referral</option>
+                                    <option value="search">Search engine</option>
+                                    <option value="social">Social media</option>
+                                    <option value="university">University / campus</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn--accent" id="contact-submit-btn">
+                                    Send My Request &rarr;
+                                </button>
+                                <p class="form-disclaimer">
+                                    We'll respond within one business day. Your information is never shared or sold.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- SIDEBAR ────────────────── -->
+                    <aside class="contact-sidebar">
+
+                        <!-- Info card -->
+                        <div class="contact-info-card" data-reveal>
+                            <h5>What to bring to the call</h5>
+                            <ul class="contact-info-list">
+                                <li>
+                                    <span class="info-icon" aria-hidden="true">📋</span>
+                                    A rough description of what you're building or the problem you're solving.
+                                </li>
+                                <li>
+                                    <span class="info-icon" aria-hidden="true">📅</span>
+                                    Any deadlines or time constraints you're working within.
+                                </li>
+                                <li>
+                                    <span class="info-icon" aria-hidden="true">💰</span>
+                                    A general sense of your budget, even if it's flexible.
+                                </li>
+                                <li>
+                                    <span class="info-icon" aria-hidden="true">🔗</span>
+                                    Any existing sites, tools, or references you like the look of.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- What to expect card -->
+                        <div class="expect-card" data-reveal>
+                            <h5>What happens next</h5>
+                            <ol class="expect-steps">
+                                <li>We review your submission and research your project.</li>
+                                <li>We reach out within one business day to schedule a call.</li>
+                                <li>We run a free 30-minute discovery session together.</li>
+                                <li>You receive a written proposal and scope within 48 hours.</li>
+                            </ol>
+                        </div>
+
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ══════════════════════════════════
+         SITE FOOTER
+    ══════════════════════════════════ -->
     <footer id="site-footer">
         <div class="container">
             <div class="footer-grid">
@@ -69,9 +283,30 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
     <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
-    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // Client-side form validation before Formspark submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            var requiredFields = this.querySelectorAll('[required]');
+            var valid = true;
+            requiredFields.forEach(function(field) {
+                field.style.borderColor = '';
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#ef4444';
+                    valid = false;
+                }
+            });
+            if (!valid) {
+                e.preventDefault();
+                var firstInvalid = this.querySelector('[required]:invalid, [style*="ef4444"]');
+                if (firstInvalid) firstInvalid.focus();
+            }
+        });
+    </script>
 </body>
 </html>
