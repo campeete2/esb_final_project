@@ -7,9 +7,15 @@
   top: 0;
   z-index: 1000;
   height: var(--header-height);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  transition: box-shadow var(--transition-base);
 }
 
-
+#site-header.scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  border-bottom-color: transparent;
+}
 .header-inner {
   display: flex;
   align-items: center;

@@ -81,9 +81,9 @@
   --transition-slow: 0.4s ease;
 
   /* Layout */
-  --container-max:     1120px;
-  --container-padding: var(--space-6);
-  --header-height:     88px;
+  --container-max:     1280px;
+  --container-padding: var(--space-8);
+  --header-height:     96px;
   --section-gap:       var(--space-32);
 }
 
