@@ -7,14 +7,14 @@
   top: 0;
   z-index: 1000;
   height: var(--header-height);
-  background-color: rgba(249,249,247,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: box-shadow var(--transition-base);
+  background-color: transparent;
+  transition: background-color var(--transition-base);
 }
 
 #site-header.scrolled {
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+  background-color: rgba(249,249,247,0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .header-inner {
@@ -34,8 +34,9 @@
 
 .site-logo__img {
   display: block;
-  height: 22px;
-  width: auto;
+  width: 144px;
+  height: 72px;
+  object-fit: contain;
 }
 
 /* ── Desktop Nav — Pill Group ──────────────────────────── */
