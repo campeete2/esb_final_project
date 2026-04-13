@@ -81,8 +81,8 @@
   --transition-slow: 0.4s ease;
 
   /* Layout */
-  --container-max:     none;
-  --container-padding: clamp(var(--space-5), 4vw, var(--space-16));
+  --container-max:     1440px;
+  --container-padding: clamp(var(--space-5), 5vw, var(--space-16));
   --header-height:     96px;
   --section-gap:       var(--space-32);
 }
