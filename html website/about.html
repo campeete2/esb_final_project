@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/about.css">
 </head>
 <body>
 
+    <!-- ══════════════════════════════════
+         SITE HEADER
+    ══════════════════════════════════ -->
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
@@ -32,10 +36,194 @@
         </div>
     </header>
 
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
     <main id="about-content">
-        <!-- Content will be built in Phase 3 -->
+
+        <!-- PAGE HERO ────────────────────────── -->
+        <section id="about-hero">
+            <div class="about-hero-orb" aria-hidden="true"></div>
+            <div class="container">
+                <div class="about-hero-inner">
+                    <span class="section-label">About the Studio</span>
+                    <h1>Built by builders, for builders.</h1>
+                    <p>Empty Sandbox is an AI-native consultancy rooted in the belief that great digital work should be accessible — not just to companies with large budgets, but to anyone with a real problem worth solving.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDIO STORY ─────────────────────── -->
+        <section id="studio-story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-callout" data-reveal>
+                        <blockquote>
+                            "Every engagement begins with a real conversation — not a template. We believe the best solutions come from understanding the <span class="quote-accent">problem first</span>."
+                        </blockquote>
+                        <div class="story-callout-footer">
+                            <div class="story-callout-line"></div>
+                            <span>Empty Sandbox Studio Philosophy</span>
+                        </div>
+                    </div>
+                    <div class="story-text" data-reveal data-reveal-delay="1">
+                        <span class="section-label">Our Story</span>
+                        <h3>A studio born out of the startup ecosystem.</h3>
+                        <p>Empty Sandbox grew out of a simple observation: the gap between having a great idea and having a working product is not a technical problem — it's an access problem. Early-stage founders, student entrepreneurs, and small organizations often have real, solvable problems but no clear path to a development partner willing to work within their constraints.</p>
+                        <p>Our studio was built to fill that gap. We combine structured consulting, lean product development principles, and AI-assisted workflows to deliver working solutions quickly and reliably — without the overhead of a traditional agency or the uncertainty of working with freelancers alone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES ─────────────────────── -->
+        <section id="capabilities">
+            <div class="container">
+                <div class="capabilities-header" data-reveal>
+                    <span class="section-label">What We Do Well</span>
+                    <h2>Our core capabilities.</h2>
+                    <p>From early discovery to production deployment, our team handles the full stack of digital product development.</p>
+                </div>
+                <div class="capabilities-grid">
+                    <div class="capability-item" data-reveal>
+                        <div class="capability-icon" aria-hidden="true">🧩</div>
+                        <div>
+                            <h5>Product Strategy</h5>
+                            <p>Scoping, roadmapping, and identifying the right MVP to validate before over-investing.</p>
+                        </div>
+                    </div>
+                    <div class="capability-item" data-reveal data-reveal-delay="1">
+                        <div class="capability-icon" aria-hidden="true">🎨</div>
+                        <div>
+                            <h5>UI/UX Design</h5>
+                            <p>Wireframes, prototypes, and polished interfaces grounded in usability and brand clarity.</p>
+                        </div>
+                    </div>
+                    <div class="capability-item" data-reveal>
+                        <div class="capability-icon" aria-hidden="true">💻</div>
+                        <div>
+                            <h5>Web Development</h5>
+                            <p>Clean, semantic HTML/CSS/JS builds and modern framework implementations built to scale.</p>
+                        </div>
+                    </div>
+                    <div class="capability-item" data-reveal data-reveal-delay="1">
+                        <div class="capability-icon" aria-hidden="true">🛒</div>
+                        <div>
+                            <h5>Commerce Migration</h5>
+                            <p>Migrating storefronts from limiting platforms like Squarespace or Wix to capable, custom alternatives.</p>
+                        </div>
+                    </div>
+                    <div class="capability-item" data-reveal>
+                        <div class="capability-icon" aria-hidden="true">⚙️</div>
+                        <div>
+                            <h5>Systems & Tooling</h5>
+                            <p>Custom internal tools, membership systems, and operational infrastructure for organizations.</p>
+                        </div>
+                    </div>
+                    <div class="capability-item" data-reveal data-reveal-delay="1">
+                        <div class="capability-icon" aria-hidden="true">🤖</div>
+                        <div>
+                            <h5>AI-Assisted Development</h5>
+                            <p>Leveraging AI tooling to accelerate timelines and reduce costs — with human judgment guiding every decision.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENGAGEMENT PROCESS ───────────────── -->
+        <section id="our-process">
+            <div class="container">
+                <div class="process-header" data-reveal>
+                    <span class="section-label">How We Work</span>
+                    <h2>Our engagement process.</h2>
+                    <p>Every project follows a structured, lean process designed to deliver working solutions quickly and reduce wasted investment.</p>
+                </div>
+                <ol class="process-timeline" aria-label="Engagement process steps">
+                    <li class="process-step" data-reveal>
+                        <div class="process-step-number" aria-hidden="true">1</div>
+                        <div class="process-step-body">
+                            <h4>Discovery &amp; Intake</h4>
+                            <p>We start with a structured conversation to understand your current systems, objectives, constraints, and what success looks like for your project. No assumptions, no templates — just a real assessment of where you are and where you want to be.</p>
+                        </div>
+                    </li>
+                    <li class="process-step" data-reveal>
+                        <div class="process-step-number" aria-hidden="true">2</div>
+                        <div class="process-step-body">
+                            <h4>Scoping &amp; Roadmap</h4>
+                            <p>Based on discovery, we define a clear scope: what will be built, what it will cost, and what the delivery timeline looks like. We prioritize the minimum set of features needed to validate your idea and get to market quickly.</p>
+                        </div>
+                    </li>
+                    <li class="process-step" data-reveal>
+                        <div class="process-step-number" aria-hidden="true">3</div>
+                        <div class="process-step-body">
+                            <h4>Sprint-Based Development</h4>
+                            <p>Builds are delivered in focused sprints with regular check-ins and working demos. You always know what's happening, what's next, and how feedback gets incorporated — no black boxes.</p>
+                        </div>
+                    </li>
+                    <li class="process-step" data-reveal>
+                        <div class="process-step-number" aria-hidden="true">4</div>
+                        <div class="process-step-body">
+                            <h4>Review &amp; Refinement</h4>
+                            <p>After each sprint, we review progress together and refine based on what we learn. This lean cycle of build → validate → adjust keeps the project aligned with real outcomes rather than initial assumptions.</p>
+                        </div>
+                    </li>
+                    <li class="process-step" data-reveal>
+                        <div class="process-step-number" aria-hidden="true">5</div>
+                        <div class="process-step-body">
+                            <h4>Launch &amp; Handoff</h4>
+                            <p>We deploy your project, walk you through everything, and provide documentation so your team can maintain and grow it confidently. Ongoing support engagements are available for clients who need continued partnership.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- WHO WE SERVE ──────────────────────── -->
+        <section id="who-we-serve">
+            <div class="container">
+                <div class="serve-header" data-reveal>
+                    <span class="section-label" style="color: rgba(168,85,247,0.9);">Who We Work With</span>
+                    <h2>Three types of clients. One studio.</h2>
+                    <p>Our flexible engagement model is built to serve clients across a range of budgets, timelines, and technical needs.</p>
+                </div>
+                <div class="serve-grid">
+                    <article class="serve-card" data-reveal>
+                        <div class="serve-card-icon" aria-hidden="true">💡</div>
+                        <h5>Early-Stage Founders</h5>
+                        <p>You have a defined idea but lack the technical resources to build it. We provide both strategic guidance and hands-on execution at a price that reflects your stage of growth.</p>
+                    </article>
+                    <article class="serve-card" data-reveal data-reveal-delay="1">
+                        <div class="serve-card-icon" aria-hidden="true">🏪</div>
+                        <h5>Small &amp; Local Businesses</h5>
+                        <p>You've outgrown your template site and need something custom, scalable, and maintainable. We rebuild, migrate, and modernize — with reliability and clear ROI.</p>
+                    </article>
+                    <article class="serve-card" data-reveal data-reveal-delay="2">
+                        <div class="serve-card-icon" aria-hidden="true">🤝</div>
+                        <h5>Organizations &amp; Nonprofits</h5>
+                        <p>You have recurring operational problems that a well-scoped custom tool could solve permanently — but limited budget. Our flexible tiers make professional development accessible.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT CTA ────────────────────────── -->
+        <section id="about-cta" class="section">
+            <div class="container">
+                <div class="about-cta-inner" data-reveal>
+                    <span class="section-label">Get Started</span>
+                    <h2>Let's talk about your project.</h2>
+                    <p>Whether you have a fully scoped idea or just a problem worth solving, we'd love to hear about it. Book a free discovery call and let's figure out what's possible.</p>
+                    <a href="contact.html" class="btn btn--primary" id="about-cta-btn">Book a Free Call &rarr;</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ══════════════════════════════════
+         SITE FOOTER
+    ══════════════════════════════════ -->
     <footer id="site-footer">
         <div class="container">
             <div class="footer-grid">
@@ -69,9 +257,12 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
     <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
-    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

@@ -10,21 +10,19 @@
     <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/print.css" media="print">
 </head>
 <body>
 
     <!-- ══════════════════════════════════
-         SITE HEADER / NAVIGATION
+         SITE HEADER
     ══════════════════════════════════ -->
     <header id="site-header">
         <div class="container header-inner">
-            <!-- Logo -->
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
                 <span class="site-logo__text">Empty Sandbox</span>
             </a>
-
-            <!-- Desktop Navigation -->
             <nav id="main-menu" aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -33,8 +31,6 @@
                     <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
-
-            <!-- CTA Button -->
             <div class="header-cta">
                 <a href="contact.html" class="btn btn--primary" id="header-cta-btn">Book a Call</a>
             </div>
@@ -45,7 +41,191 @@
          MAIN CONTENT
     ══════════════════════════════════ -->
     <main id="home-content">
-        <!-- Content will be built in Phase 3 -->
+
+        <!-- HERO ─────────────────────────────── -->
+        <section id="hero">
+            <div class="hero-orb" aria-hidden="true"></div>
+            <div class="hero-orb-2" aria-hidden="true"></div>
+            <div class="container">
+                <div class="hero-inner">
+                    <span class="hero-eyebrow">AI-Native Consultancy &amp; Product Studio</span>
+                    <h1 class="hero-headline">
+                        We build what your <span class="accent-word">idea</span> actually needs.
+                    </h1>
+                    <p class="hero-subtext">
+                        Empty Sandbox partners with early-stage founders, growing businesses, and organizations to design, build, and modernize their digital presence — faster and smarter with AI-assisted workflows.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn--primary" id="hero-book-btn">Book a Call &rarr;</a>
+                        <a href="work.html" class="btn btn--outline" id="hero-work-btn">View Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST STRIP ──────────────────────── -->
+        <div id="trust-strip">
+            <div class="container trust-strip-inner">
+                <span class="trust-label">Trusted by</span>
+                <div class="trust-tags">
+                    <span class="trust-tag">Early-Stage Founders</span>
+                    <span class="trust-tag">Student Entrepreneurs</span>
+                    <span class="trust-tag">Small Businesses</span>
+                    <span class="trust-tag">Local Organizations</span>
+                    <span class="trust-tag">Nonprofits</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERVICES ─────────────────────────── -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="services-header">
+                    <span class="section-label">What We Do</span>
+                    <h2>Full-service digital, from idea to launch.</h2>
+                    <p>We handle strategy, design, and development in a single sprint-based engagement so you can focus on building your business.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card" data-reveal>
+                        <div class="service-icon" aria-hidden="true">🚀</div>
+                        <h4>MVP Development</h4>
+                        <p>From napkin sketch to working product. We scope, design, and build minimum viable products built for validation — delivered in weeks, not months.</p>
+                    </article>
+                    <article class="service-card" data-reveal data-reveal-delay="1">
+                        <div class="service-icon" aria-hidden="true">🔄</div>
+                        <h4>Digital Transformation</h4>
+                        <p>Outgrown Squarespace or Wix? We migrate legacy systems and outdated platforms to scalable, modern stacks that grow with your business.</p>
+                    </article>
+                    <article class="service-card" data-reveal data-reveal-delay="2">
+                        <div class="service-icon" aria-hidden="true">🛠️</div>
+                        <h4>Custom Tooling</h4>
+                        <p>Recurring admin problems deserve permanent solutions. We build custom internal tools, dashboards, and operational systems scoped to fit your constraints.</p>
+                    </article>
+                    <article class="service-card" data-reveal>
+                        <div class="service-icon" aria-hidden="true">🎨</div>
+                        <h4>Web Design & Rebuild</h4>
+                        <p>Polished, performant front-ends that convert visitors into clients. We rebuild storefronts and marketing sites to reflect the quality of your brand.</p>
+                    </article>
+                    <article class="service-card" data-reveal data-reveal-delay="1">
+                        <div class="service-icon" aria-hidden="true">🧭</div>
+                        <h4>Strategy & Consulting</h4>
+                        <p>Every engagement begins with discovery. We assess your current tech, define clear objectives, and map an execution roadmap before a single line is written.</p>
+                    </article>
+                    <article class="service-card" data-reveal data-reveal-delay="2">
+                        <div class="service-icon" aria-hidden="true">⚡</div>
+                        <h4>AI-Assisted Delivery</h4>
+                        <p>Our internal workflows use AI tooling to accelerate delivery and reduce cost — without sacrificing the quality standards our team applies directly.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK PREVIEW ─────────────────────── -->
+        <section id="work-preview">
+            <div class="container">
+                <div class="work-preview-header">
+                    <div>
+                        <span class="section-label">Featured Work</span>
+                        <h2>Projects we're proud of.</h2>
+                    </div>
+                    <a href="work.html" class="btn btn--outline" id="home-view-all-btn">View All Work &rarr;</a>
+                </div>
+                <div class="work-preview-grid">
+                    <article class="work-card" data-reveal>
+                        <div class="work-card-img" style="background: linear-gradient(135deg, #1a0533 0%, #4a1080 100%);"></div>
+                        <div class="work-card-overlay">
+                            <span class="work-card-tag">MVP Build</span>
+                            <h4>HighPath Platform</h4>
+                            <p>Funding discovery platform for early-stage founders.</p>
+                        </div>
+                    </article>
+                    <article class="work-card" data-reveal data-reveal-delay="1">
+                        <div class="work-card-img" style="background: linear-gradient(135deg, #0d1117 0%, #1a2744 100%);"></div>
+                        <div class="work-card-overlay">
+                            <span class="work-card-tag">Digital Transformation</span>
+                            <h4>Storefront Migration</h4>
+                            <p>Commerce rebuild from Squarespace to custom stack.</p>
+                        </div>
+                    </article>
+                    <article class="work-card" data-reveal>
+                        <div class="work-card-img" style="background: linear-gradient(135deg, #0a2a1a 0%, #1a5c36 100%);"></div>
+                        <div class="work-card-overlay">
+                            <span class="work-card-tag">Custom Tooling</span>
+                            <h4>Membership System</h4>
+                            <p>Internal operations infrastructure for a local nonprofit.</p>
+                        </div>
+                    </article>
+                    <article class="work-card" data-reveal data-reveal-delay="1">
+                        <div class="work-card-img" style="background: linear-gradient(135deg, #1a0f00 0%, #5c3a1a 100%);"></div>
+                        <div class="work-card-overlay">
+                            <span class="work-card-tag">Web Rebuild</span>
+                            <h4>Brand Identity Site</h4>
+                            <p>Marketing site built to match a new brand direction.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY EMPTY SANDBOX ────────────────── -->
+        <section id="why-esb" class="section">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-content" data-reveal>
+                        <span class="section-label">Why Us</span>
+                        <h2>Not an agency. Not a freelancer. Something better.</h2>
+                        <p>Traditional agencies are too slow and too expensive. Freelancers lack strategy. Empty Sandbox is a full-service studio that combines the speed of AI-assisted development with the judgment of experienced consultants.</p>
+                        <ul class="why-list">
+                            <li>Sprint-based delivery — working software, fast.</li>
+                            <li>AI-assisted workflows keep costs accessible without cutting corners.</li>
+                            <li>Structured discovery before any development begins.</li>
+                            <li>Transparent, tier-based pricing — no hidden fees.</li>
+                            <li>A genuine partner, not just a vendor.</li>
+                        </ul>
+                    </div>
+                    <div class="why-visual" data-reveal data-reveal-delay="1">
+                        <div class="why-card-stack">
+                            <div class="why-stat-card">
+                                <div class="why-stat-number">2x</div>
+                                <div class="why-stat-label">
+                                    <strong>Faster Delivery</strong>
+                                    Compared to traditional agency timelines.
+                                </div>
+                            </div>
+                            <div class="why-stat-card">
+                                <div class="why-stat-number">3</div>
+                                <div class="why-stat-label">
+                                    <strong>Client Segments</strong>
+                                    Founders, businesses, and organizations — all served.
+                                </div>
+                            </div>
+                            <div class="why-stat-card">
+                                <div class="why-stat-number">AI</div>
+                                <div class="why-stat-label">
+                                    <strong>Powered Workflow</strong>
+                                    Every project benefits from AI-assisted tooling.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOTTOM CTA ───────────────────────── -->
+        <section id="home-cta">
+            <div class="container">
+                <div class="home-cta-inner">
+                    <h2>Ready to build something?</h2>
+                    <p>Tell us what you're working on. We'll respond within one business day.</p>
+                    <div class="home-cta-actions">
+                        <a href="contact.html" class="btn btn--white" id="home-cta-book-btn">Book a Free Call &rarr;</a>
+                        <a href="pricing.html" class="btn btn--ghost" id="home-cta-pricing-btn">See Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- ══════════════════════════════════
@@ -54,15 +234,12 @@
     <footer id="site-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Brand Column -->
                 <div class="footer-brand">
                     <a href="index.html" class="site-logo">
                         <span class="site-logo__text"><span class="footer-accent-dot"></span>Empty Sandbox</span>
                     </a>
                     <p>An AI-native consultancy and product studio. We build, modernize, and transform digital products for founders, businesses, and organizations.</p>
                 </div>
-
-                <!-- Pages -->
                 <nav class="footer-nav-group" aria-label="Site Pages">
                     <h6>Pages</h6>
                     <ul>
@@ -73,8 +250,6 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
-
-                <!-- Connect -->
                 <div class="footer-nav-group">
                     <h6>Connect</h6>
                     <ul>
@@ -82,8 +257,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Bottom Bar -->
             <div class="footer-bottom">
                 <p>&copy; <span id="footer-year"></span> Empty Sandbox. All rights reserved.</p>
                 <div class="footer-accent-line"></div>
@@ -91,14 +264,11 @@
         </div>
     </footer>
 
-    <!-- ══════════════════════════════════
-         SCRIPTS
-    ══════════════════════════════════ -->
+    <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
     <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
     <script>
-        // Set current year in footer
         document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
 </body>
