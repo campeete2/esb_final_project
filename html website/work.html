@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/work.css">
 </head>
 <body>
 
+    <!-- ══════════════════════════════════
+         SITE HEADER
+    ══════════════════════════════════ -->
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
@@ -32,10 +36,223 @@
         </div>
     </header>
 
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
     <main id="work-content">
-        <!-- Content will be built in Phase 4 -->
+
+        <!-- PAGE HERO ────────────────────────── -->
+        <section id="work-hero">
+            <div class="work-hero-orb" aria-hidden="true"></div>
+            <div class="container">
+                <div class="work-hero-inner">
+                    <span class="section-label">Our Portfolio</span>
+                    <h1>Work we're proud to put our name on.</h1>
+                    <p>A selection of projects across MVP development, digital transformation, and custom tooling — each one scoped, built, and delivered by our team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILTER BAR ───────────────────────── -->
+        <div id="work-filter">
+            <div class="container">
+                <div class="filter-bar" role="group" aria-label="Filter portfolio by type">
+                    <span class="filter-label">Filter:</span>
+                    <button class="filter-btn active" data-filter="all" id="filter-all">All Work</button>
+                    <button class="filter-btn" data-filter="mvp" id="filter-mvp">MVP Build</button>
+                    <button class="filter-btn" data-filter="transform" id="filter-transform">Digital Transformation</button>
+                    <button class="filter-btn" data-filter="tooling" id="filter-tooling">Custom Tooling</button>
+                    <button class="filter-btn" data-filter="web" id="filter-web">Web Design</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PORTFOLIO GRID ───────────────────── -->
+        <section id="portfolio-grid">
+            <div class="container">
+                <div class="portfolio-grid">
+
+                    <!-- Featured: HighPath -->
+                    <article class="portfolio-card portfolio-card--featured" data-category="mvp" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-mvp">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="3" fill="none"/><path d="M30 50 Q50 20 70 50 Q50 80 30 50Z" fill="rgba(255,255,255,0.3)"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">MVP Build</span>
+                                <span class="work-tag work-tag--secondary">Featured</span>
+                            </div>
+                            <h3>HighPath Funding Platform</h3>
+                            <p>A discovery and matching platform helping early-stage founders identify relevant grants, investors, and funding opportunities. Built from concept to working MVP in a single sprint engagement — scoped, designed, and deployed by Empty Sandbox.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">React</span>
+                                    <span class="tech-chip">Node.js</span>
+                                    <span class="tech-chip">PostgreSQL</span>
+                                    <span class="tech-chip">Cloudflare</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Build something like this &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Storefront Migration -->
+                    <article class="portfolio-card" data-category="transform" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-transform">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="20" width="80" height="60" rx="8" stroke="white" stroke-width="3" fill="none"/><line x1="10" y1="38" x2="90" y2="38" stroke="white" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">Digital Transformation</span>
+                            </div>
+                            <h3>E-Commerce Migration</h3>
+                            <p>Migrated a local retailer's storefront off Squarespace to a custom, performance-optimized e-commerce stack. Resulted in faster load times, lower monthly overhead, and full control over the checkout experience.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">HTML/CSS</span>
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">Shopify API</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Start a project &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Nonprofit Membership System -->
+                    <article class="portfolio-card" data-category="tooling" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-tooling">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="35" cy="40" r="15" stroke="white" stroke-width="3" fill="none"/><circle cx="65" cy="40" r="15" stroke="white" stroke-width="3" fill="none"/><path d="M15 80 Q35 60 65 60 Q85 60 85 80" stroke="white" stroke-width="3" fill="none"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">Custom Tooling</span>
+                            </div>
+                            <h3>Nonprofit Membership System</h3>
+                            <p>Built a lightweight internal membership management system for a local nonprofit that had been running operations manually through spreadsheets. Automated renewals, member records, and communications — saving 10+ hours per week.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">Airtable API</span>
+                                    <span class="tech-chip">Formspark</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Start a project &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Brand Identity Site -->
+                    <article class="portfolio-card" data-category="web" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-brand">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><polygon points="50,10 90,80 10,80" stroke="white" stroke-width="3" fill="none"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">Web Design</span>
+                            </div>
+                            <h3>Brand Identity Site</h3>
+                            <p>A polished, animated marketing site built to match a client's newly developed brand identity. Focused on storytelling, visual hierarchy, and conversion — moving first-time visitors to a booked consultation.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">HTML/CSS</span>
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">Google Fonts</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Start a project &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: Internal Dashboard -->
+                    <article class="portfolio-card" data-category="tooling" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-internal">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="10" width="35" height="35" rx="4" stroke="white" stroke-width="3" fill="none"/><rect x="55" y="10" width="35" height="35" rx="4" stroke="white" stroke-width="3" fill="none"/><rect x="10" y="55" width="35" height="35" rx="4" stroke="white" stroke-width="3" fill="none"/><rect x="55" y="55" width="35" height="35" rx="4" stroke="white" stroke-width="3" fill="none"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">Custom Tooling</span>
+                            </div>
+                            <h3>Operations Dashboard</h3>
+                            <p>A custom internal dashboard for a small business owner to track orders, monitor key metrics, and manage team tasks — replacing a patchwork of spreadsheets and third-party apps.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">Chart.js</span>
+                                    <span class="tech-chip">REST APIs</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Start a project &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card: App MVP -->
+                    <article class="portfolio-card" data-category="mvp" data-reveal>
+                        <div class="portfolio-card-visual">
+                            <div class="portfolio-card-bg bg-commerce">
+                                <div class="card-visual-inner" aria-hidden="true">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="5" width="40" height="90" rx="8" stroke="white" stroke-width="3" fill="none"/><line x1="43" y1="18" x2="57" y2="18" stroke="white" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="82" r="4" fill="white"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-body">
+                            <div class="portfolio-card-meta">
+                                <span class="work-tag">MVP Build</span>
+                            </div>
+                            <h3>Mobile-First Web App</h3>
+                            <p>A student entrepreneur needed a mobile-first MVP to pitch to investors. We scoped, designed, and delivered a functional prototype in under three weeks — built to demo well and scale into a full product.</p>
+                            <div class="portfolio-card-footer">
+                                <div class="portfolio-tech-stack" aria-label="Technologies used">
+                                    <span class="tech-chip">HTML/CSS</span>
+                                    <span class="tech-chip">JavaScript</span>
+                                    <span class="tech-chip">PWA</span>
+                                </div>
+                                <a href="contact.html" class="portfolio-link" aria-label="Start a similar project">Start a project &rarr;</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK CTA ─────────────────────────── -->
+        <section id="work-cta">
+            <div class="container">
+                <div class="work-cta-inner">
+                    <h2>Have a project in mind?</h2>
+                    <p>We'd love to hear about it. Book a free discovery call and let's figure out what's possible.</p>
+                    <div class="home-cta-actions">
+                        <a href="contact.html" class="btn btn--white" id="work-cta-btn">Book a Free Call &rarr;</a>
+                        <a href="pricing.html" class="btn btn--ghost" id="work-pricing-btn">See Pricing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ══════════════════════════════════
+         SITE FOOTER
+    ══════════════════════════════════ -->
     <footer id="site-footer">
         <div class="container">
             <div class="footer-grid">
@@ -69,9 +286,30 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
     <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
-    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // Portfolio filter
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+
+                var filter = this.getAttribute('data-filter');
+                document.querySelectorAll('.portfolio-card').forEach(function(card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
