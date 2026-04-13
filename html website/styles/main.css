@@ -83,7 +83,7 @@
   /* Layout */
   --container-max:     1120px;
   --container-padding: var(--space-6);
-  --header-height:     64px;
+  --header-height:     88px;
   --section-gap:       var(--space-32);
 }
 
@@ -141,6 +141,14 @@ a {
 }
 
 img, video, svg { display: block; max-width: 100%; height: auto; }
+
+/* ── Logo sizing ─────────────────────────────────────────── */
+.site-logo__img {
+  display: block;
+  width: 144px;
+  height: 72px;
+  object-fit: contain;
+}
 ul, ol { list-style: none; }
 button { font-family: var(--font-main); border: none; background: none; cursor: pointer; }
 
