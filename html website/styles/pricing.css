@@ -5,7 +5,6 @@
 /* Hero */
 #pricing-hero {
   padding-block: var(--space-32) var(--space-20);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .pricing-hero-inner { max-width: 640px; }

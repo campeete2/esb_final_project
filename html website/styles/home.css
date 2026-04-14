@@ -5,7 +5,6 @@
 /* ── Hero ───────────────────────────────────────────────────── */
 #hero {
   padding-block: var(--space-32) var(--space-24);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-inner {
@@ -54,7 +53,6 @@
 /* ── Trust Strip ──────────────────────────────────────────── */
 #trust-strip {
   padding-block: var(--space-5);
-  border-bottom: 1px solid var(--color-border);
   overflow: hidden;
 }
 
@@ -104,7 +102,6 @@
   align-items: start;
   margin-bottom: var(--space-20);
   padding-bottom: var(--space-16);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .services-top h2 {
@@ -162,7 +159,6 @@
 /* ── Work Preview ───────────────────────────────────────── */
 #work-preview {
   padding-block: var(--space-32);
-  border-top: 1px solid var(--color-border);
 }
 
 .work-preview-head {
@@ -244,7 +240,6 @@
 /* ── Why ESB ─────────────────────────────────────────────── */
 #why-esb {
   padding-block: var(--space-32);
-  border-top: 1px solid var(--color-border);
 }
 
 .why-layout {
@@ -327,7 +322,6 @@
 /* ── Home CTA — Centered prominent section ───────────────── */
 #home-cta {
   padding-block: var(--space-32);
-  border-top: 1px solid var(--color-border);
 }
 
 .home-cta-inner {
