@@ -20,7 +20,7 @@ $(document).ready(function () {
   var $header = $('#site-header');
 
   $(window).on('scroll.header', function () {
-    $header.toggleClass('scrolled', $(window).scrollTop() > 10);
+    $header.toggleClass('is-scrolled', $(window).scrollTop() > 20);
   });
 
   // ── Custom Mobile Menu ─────────────────────────────────────
