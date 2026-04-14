@@ -173,10 +173,10 @@ button { font-family: var(--font-main); border: none; background: none; cursor: 
   align-items: center;
   justify-content: center;
   gap: 0.4em;
-  padding: 0.65rem 1.25rem;
+  padding: 0.85rem 1.75rem;   /* matches home page CTA sizing */
   border-radius: var(--radius-pill);
   font-family: var(--font-main);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);  /* 16px — one step up from sm */
   font-weight: var(--weight-medium);
   letter-spacing: -0.01em;
   line-height: 1;
