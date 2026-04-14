@@ -149,7 +149,7 @@ select.form-control {
   line-height: 1.55;
 }
 
-.info-icon { flex-shrink: 0; font-size: 0.95rem; margin-top: 1px; }
+.info-icon { display: none; }
 
 .expect-card {
   background: var(--color-surface);

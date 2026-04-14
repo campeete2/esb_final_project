@@ -73,7 +73,7 @@
         '</form>',
       '</div>',
       '<div class="exit-success" style="display:none;text-align:center;padding:2rem 0">',
-        '<div style="font-size:2rem;margin-bottom:1rem">&#10003;</div>',
+        '<div class="exit-check-icon"></div>',
         '<h4>We\'ll be in touch.</h4>',
         '<p style="color:#666;font-size:.875rem;font-weight:300">Expect to hear from us within one business day.</p>',
       '</div>',

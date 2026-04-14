@@ -150,9 +150,17 @@
   padding: var(--space-8) 0;
 }
 
+/* CSS-only confirmation mark — no emoji */
+.exit-check-icon {
+  width: 32px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 99px;
+  margin: 0 auto var(--space-5);
+}
+
 .exit-success .exit-success-icon {
-  font-size: 2rem;
-  margin-bottom: var(--space-4);
+  display: none; /* removed emoji */
 }
 
 .exit-success h4 {
