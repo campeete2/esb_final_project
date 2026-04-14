@@ -7,10 +7,12 @@
     <meta name="description" content="Transparent, tier-based pricing for digital transformation, MVP builds, and custom tooling from Empty Sandbox.">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/pricing.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo/emptysandbox-icon.svg" type="image/svg+xml">
+    <link rel="preload" href="https://images.ctfassets.net/zdahadqndvwb/aTdjjkgBcQpmNyE3xkjfz/8e5479681f9d378bc77d112612e5a80c/emptysandbox-icon.svg" as="image" fetchpriority="high">
 </head>
 <body>
 
@@ -20,18 +22,42 @@
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
-                <span class="site-logo__text">Empty Sandbox</span>
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
             </a>
             <nav id="main-menu" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+                <ul class="nav-pill-group">
                     <li><a href="work.html">Work</a></li>
                     <li><a href="pricing.html" class="active">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
+                                    <li class="nav-cta-item"><a href="contact.html" id="header-cta-btn">Book a Call</a></li>
                 </ul>
             </nav>
-            <div class="header-cta">
-                <a href="contact.html" class="btn btn--primary" id="header-cta-btn">Book a Call</a>
+            <div class="header-right">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+            </a>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation">&#x2715;</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="pricing.html" class="active">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="mobile-cta-btn">Book a Call</a>
             </div>
         </div>
     </header>
@@ -48,8 +74,8 @@
                 <div class="pricing-hero-inner">
                     <span class="section-label">Transparent Pricing</span>
                     <h1>Simple, honest pricing.</h1>
-                    <p>No retainers, no hidden fees. Every engagement tier is designed to fit a specific stage of growth — so you pay for exactly what you need.</p>
-                    <span class="billing-notice">✦ All projects begin with a free discovery call</span>
+                    <p>No retainers, no hidden fees. Every engagement tier is designed to fit a specific stage of growth. You pay for exactly what you need.</p>
+                    <span class="billing-notice">All projects begin with a free discovery call</span>
                 </div>
             </div>
         </section>
@@ -64,7 +90,7 @@
                         <div class="pricing-card-header">
                             <div class="pricing-tier-label">Starter</div>
                             <h3>Launch Pad</h3>
-                            <p>For student founders and early-stage entrepreneurs who need to get something real in front of users — fast.</p>
+                            <p>For student founders and early-stage entrepreneurs who need to get something real in front of users. fast.</p>
                         </div>
                         <div class="pricing-amount">
                             <div class="price">$500<span style="font-size:var(--text-2xl); font-weight:var(--weight-medium); color:var(--color-text-secondary);">+</span></div>
@@ -89,7 +115,7 @@
                         <div class="pricing-card-header">
                             <div class="pricing-tier-label">Studio</div>
                             <h3>Full Build</h3>
-                            <p>For businesses and founders who need a polished, fully featured product — built with strategy, delivered with care.</p>
+                            <p>For businesses and founders who need a polished, fully featured product. built with strategy, delivered with care.</p>
                         </div>
                         <div class="pricing-amount">
                             <div class="price">$2,000<span style="font-size:var(--text-2xl); font-weight:var(--weight-medium); color:var(--color-text-secondary);">+</span></div>
@@ -142,17 +168,17 @@
                 <div class="audience-match-grid">
                     <div class="audience-card" data-reveal>
                         <div class="audience-card-label">Best for</div>
-                        <h5>🎓 Student &amp; Early Founders</h5>
+                        <h5>Student &amp; Early Founders</h5>
                         <p>The <strong>Launch Pad</strong> tier is built for you. Transparent pricing, fast turnaround, and a partner who understands tight budgets and the need to move quickly.</p>
                     </div>
                     <div class="audience-card" data-reveal data-reveal-delay="1">
                         <div class="audience-card-label">Best for</div>
-                        <h5>🏪 Small &amp; Local Businesses</h5>
-                        <p>The <strong>Full Build</strong> tier gives you a polished, custom digital presence — without the overhead of a traditional agency or the uncertainty of freelancers.</p>
+                        <h5>Small &amp; Local Businesses</h5>
+                        <p>The <strong>Full Build</strong> tier gives you a polished, custom digital presence. without the overhead of a traditional agency or the uncertainty of freelancers.</p>
                     </div>
                     <div class="audience-card" data-reveal data-reveal-delay="2">
                         <div class="audience-card-label">Best for</div>
-                        <h5>🤝 Organizations &amp; Nonprofits</h5>
+                        <h5>Organizations &amp; Nonprofits</h5>
                         <p>The <strong>Custom Engagement</strong> tier is flexible enough for operational infrastructure projects, membership systems, and ongoing development needs.</p>
                     </div>
                 </div>
@@ -183,7 +209,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
-                            Starter projects typically deliver in 1–2 weeks. Full Build engagements run 3–6 weeks depending on scope. Custom engagements are scoped and scheduled during discovery. Our AI-assisted workflow means we move faster than a traditional agency without sacrificing quality.
+                            Starter projects typically deliver in 1–2 weeks. Full Build engagements run 3–6 weeks depending on scope. Custom engagements are scoped and scheduled during discovery. Our structured workflow means we move faster than a traditional agency without sacrificing quality.
                         </div>
                     </div>
                     <div class="faq-item" data-reveal>
@@ -210,7 +236,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                         <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
-                            All pricing is a starting point, not a rigid constraint. If your project has unique complexity or requirements, we'll scope it specifically for you. Book a call and tell us what you're working on — we'll figure out what makes sense.
+                            All pricing is a starting point, not a rigid constraint. If your project has unique complexity or requirements, we'll scope it specifically for you. Book a call and tell us what you're working on. we'll figure out what makes sense.
                         </div>
                     </div>
                 </div>
@@ -231,21 +257,33 @@
             </div>
         </section>
 
+
+        <!-- SITE CTA -->
+        <section class="site-cta-section">
+            <div class="container">
+                <div class="home-cta-inner" data-reveal>
+                    <h2>Not sure which tier fits?</h2>
+                    <p>Book a free call and we'll help you figure it out. No commitment required.</p>
+                    <div class="home-cta-actions">
+                        <a href="contact.html" class="btn btn--primary">Book a Free Call</a>
+                        <a href="work.html" class="btn btn--outline">See Our Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- ══════════════════════════════════
-         SITE FOOTER
-    ══════════════════════════════════ -->
+    <!-- FOOTER. Rounded floating card -->
     <footer id="site-footer">
-        <div class="container">
-            <div class="footer-grid">
+        <div class="footer-card">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html" class="site-logo">
-                        <span class="site-logo__text"><span class="footer-accent-dot"></span>Empty Sandbox</span>
+                    <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                        <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
                     </a>
-                    <p>An AI-native consultancy and product studio. We build, modernize, and transform digital products for founders, businesses, and organizations.</p>
+                    <p>A consultancy and product studio. We design, build, and ship digital products for founders, businesses, and organizations. structure and clarity.</p>
                 </div>
-                <nav class="footer-nav-group" aria-label="Site Pages">
+                <div class="footer-col">
                     <h6>Pages</h6>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -254,24 +292,34 @@
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                </nav>
-                <div class="footer-nav-group">
-                    <h6>Connect</h6>
+                </div>
+                <div class="footer-col">
+                    <h6>Services</h6>
+                    <ul>
+                        <li><a href="pricing.html">MVP Development</a></li>
+                        <li><a href="pricing.html">Digital Transformation</a></li>
+                        <li><a href="pricing.html">Custom Tooling</a></li>
+                        <li><a href="pricing.html">Strategy &amp; Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>Get Started</h6>
                     <ul>
                         <li><a href="contact.html">Book a Call</a></li>
+                        <li><a href="pricing.html">View Pricing</a></li>
+                        <li><a href="work.html">See Our Work</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="footer-year"></span> Empty Sandbox. All rights reserved.</p>
-                <div class="footer-accent-line"></div>
+                <span class="footer-copy">&copy; <span id="footer-year"></span> Empty Sandbox LLC. All rights reserved.</span>
+                <span class="footer-tagline">Built with structure. Delivered with clarity.</span>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
-    <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
     <script>
         document.getElementById('footer-year').textContent = new Date().getFullYear();
@@ -294,5 +342,6 @@
             });
         });
     </script>
+    <script src="helpers/exit-popup.js"></script>
 </body>
 </html>

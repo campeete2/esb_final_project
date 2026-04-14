@@ -1,0 +1,163 @@
+/* ============================================================
+   EMPTY SANDBOX — PRINT STYLESHEET
+   Applied only when printing (Home page primarily)
+   ============================================================ */
+
+@media print {
+  /* ── Hide interactive / decorative elements ── */
+  #site-header,
+  #site-footer,
+  .btn,
+  .slicknav_menu,
+  .hero-orb,
+  .hero-orb-2,
+  #trust-strip,
+  #work-preview,
+  #home-cta,
+  [data-reveal],
+  .header-cta {
+    display: none !important;
+  }
+
+  /* ── Page setup ── */
+  @page {
+    margin: 1in;
+    size: letter portrait;
+  }
+
+  /* ── Reset backgrounds and colors ── */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  /* ── Typography ── */
+  h1 {
+    font-size: 22pt;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 16pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4pt;
+  }
+
+  h3, h4 {
+    font-size: 13pt;
+    page-break-after: avoid;
+  }
+
+  p {
+    max-width: 100%;
+    orphans: 3;
+    widows: 3;
+    margin-bottom: 8pt;
+  }
+
+  /* ── Links ── */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555 !important;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  /* ── Layout reset ── */
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ── Services section ── */
+  .services-grid {
+    display: block;
+  }
+
+  .service-card {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 8pt;
+    margin-bottom: 8pt;
+    page-break-inside: avoid;
+  }
+
+  .service-icon {
+    display: none;
+  }
+
+  /* ── Why ESB section ── */
+  .why-grid {
+    display: block;
+  }
+
+  .why-card-stack {
+    display: block;
+  }
+
+  .why-stat-card {
+    border: 1px solid #ccc;
+    padding: 6pt;
+    margin-bottom: 6pt;
+    page-break-inside: avoid;
+  }
+
+  /* ── Section labels ── */
+  .section-label {
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #555 !important;
+  }
+
+  .section-label::before {
+    display: none;
+  }
+
+  /* ── Hero section ── */
+  #hero {
+    min-height: auto;
+    padding: 0 0 16pt 0;
+    border-bottom: 2px solid #000;
+    margin-bottom: 16pt;
+  }
+
+  .hero-eyebrow {
+    border: 1px solid #ccc;
+    padding: 2pt 6pt;
+    font-size: 8pt;
+  }
+
+  .hero-headline {
+    font-size: 24pt;
+  }
+
+  .hero-subtext {
+    font-size: 11pt;
+    max-width: 100%;
+  }
+}

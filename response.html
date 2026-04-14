@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Empty Sandbox</title>
+    <meta name="description" content="Thank you for reaching out to Empty Sandbox. We'll review your submission and be in touch within one business day.">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/response.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo/emptysandbox-icon.svg" type="image/svg+xml">
+    <link rel="preload" href="https://images.ctfassets.net/zdahadqndvwb/aTdjjkgBcQpmNyE3xkjfz/8e5479681f9d378bc77d112612e5a80c/emptysandbox-icon.svg" as="image" fetchpriority="high">
+</head>
+<body>
+
+    <!-- ══════════════════════════════════
+         SITE HEADER
+    ══════════════════════════════════ -->
+    <header id="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+            </a>
+            <nav id="main-menu" aria-label="Main Navigation">
+                <ul class="nav-pill-group">
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html">About</a></li>
+                                    <li class="nav-cta-item"><a href="contact.html" id="header-cta-btn">Book a Call</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+                <div class="mobile-menu-top">
+                    <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+            </a>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation">&#x2715;</button>
+                </div>
+                <nav class="mobile-nav" aria-label="Mobile Navigation">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="mobile-cta-btn">Book a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════ -->
+    <main id="response-content">
+        <section id="response-main">
+            <div class="container">
+                <div class="response-inner">
+
+                    <!-- Success icon -->
+
+                    <h1>Message received.</h1>
+                    <p class="response-subtext">
+                        Thanks for reaching out to Empty Sandbox. We've received your submission and will be in touch within one business day to schedule your discovery call.
+                    </p>
+
+                    <!-- Submission Summary (populated from sessionStorage) -->
+                    <div class="response-next-card" id="submission-summary" style="display:none;">
+                        <h5>Your Submission</h5>
+                        <div id="submission-details" style="display:flex;flex-direction:column;gap:0.75rem;"></div>
+                    </div>
+
+                    <!-- What happens next -->
+                    <div class="response-next-card">
+                        <h5>What happens next</h5>
+                        <ol class="response-next-steps">
+                            <li>We review your submission and do a quick initial research pass on your project and context.</li>
+                            <li>We reach out via email to confirm receipt and propose times for a 30-minute discovery call.</li>
+                            <li>We run the discovery call and understand your goals, constraints, and timeline together.</li>
+                            <li>You receive a written project proposal and scope document within 48 hours of the call.</li>
+                        </ol>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="response-actions">
+                        <a href="index.html" class="btn btn--primary" id="response-home-btn">Back to Home &rarr;</a>
+                        <a href="work.html" class="btn btn--outline" id="response-work-btn">Explore Our Work</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER. Rounded floating card -->
+    <footer id="site-footer">
+        <div class="footer-card">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
+                        <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+                    </a>
+                    <p>A consultancy and product studio. We design, build, and ship digital products for founders, businesses, and organizations. structure and clarity.</p>
+                </div>
+                <div class="footer-col">
+                    <h6>Pages</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>Services</h6>
+                    <ul>
+                        <li><a href="pricing.html">MVP Development</a></li>
+                        <li><a href="pricing.html">Digital Transformation</a></li>
+                        <li><a href="pricing.html">Custom Tooling</a></li>
+                        <li><a href="pricing.html">Strategy &amp; Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>Get Started</h6>
+                    <ul>
+                        <li><a href="contact.html">Book a Call</a></li>
+                        <li><a href="pricing.html">View Pricing</a></li>
+                        <li><a href="work.html">See Our Work</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; <span id="footer-year"></span> Empty Sandbox LLC. All rights reserved.</span>
+                <span class="footer-tagline">Built with structure. Delivered with clarity.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="helpers/vendor/jquery.min.js"></script>
+    <script src="helpers/main.js"></script>
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        // ── Read submission from sessionStorage and render summary ──
+        var raw = sessionStorage.getItem('esb_submission');
+        if (raw) {
+            try {
+                var sub = JSON.parse(raw);
+                var details = document.getElementById('submission-details');
+                var summary = document.getElementById('submission-summary');
+
+                var fields = [
+                    { label: 'Name',         value: sub.name },
+                    { label: 'Email',        value: sub.email },
+                    { label: 'Organization', value: sub.organization || '—' },
+                    { label: 'Project Type', value: sub.project_type },
+                    { label: 'Budget',       value: sub.budget },
+                    { label: 'Message',      value: sub.message }
+                ];
+
+                fields.forEach(function(f) {
+                    if (!f.value) return;
+                    var row = document.createElement('div');
+                    row.style.cssText = 'display:flex;flex-direction:column;gap:2px;padding-bottom:0.6rem;border-bottom:1px solid var(--color-border);';
+                    row.innerHTML =
+                        '<span style="font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--color-text-muted);">' +
+                        escHtml(f.label) + '</span>' +
+                        '<span style="font-size:var(--text-sm);color:var(--color-text-primary);line-height:1.55;">' +
+                        escHtml(f.value) + '</span>';
+                    details.appendChild(row);
+                });
+
+                summary.style.display = 'block';
+
+                // Clear so refreshing the page doesn't re-show stale data
+                sessionStorage.removeItem('esb_submission');
+            } catch (e) {
+                console.warn('Could not parse submission data:', e);
+            }
+        }
+
+        function escHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+    </script>
+    <script src="helpers/exit-popup.js"></script>
+</body>
+</html>
