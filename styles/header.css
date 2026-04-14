@@ -104,7 +104,7 @@
 }
 
 .nav-pill-group .nav-cta-item a:hover {
-  background-color: #333333;
+  background-color: var(--color-accent);
   color: #FFFFFF;
 }
 

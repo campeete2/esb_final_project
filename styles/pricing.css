@@ -21,7 +21,6 @@
 }
 
 /* Pricing Grid */
-#pricing-tiers { padding-block: var(--space-32); border-bottom: 1px solid var(--color-border); }
 
 .pricing-grid {
   display: grid;
@@ -146,7 +145,6 @@
 /* Audience */
 #audience-match {
   padding-block: var(--space-32);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .audience-match-grid {
@@ -185,7 +183,6 @@
 }
 
 /* FAQ */
-#pricing-faq { padding-block: var(--space-32); border-bottom: 1px solid var(--color-border); }
 
 .faq-header { max-width: 480px; margin-bottom: var(--space-12); }
 .faq-header h2 { margin-bottom: var(--space-4); }
@@ -197,7 +194,6 @@
   flex-direction: column;
 }
 
-.faq-item { border-bottom: 1px solid var(--color-border); }
 
 .faq-question {
   width: 100%;
