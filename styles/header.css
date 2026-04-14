@@ -7,13 +7,13 @@
   top: 0;
   z-index: 1000;
   height: var(--header-height);
-  /* Fully transparent — Creme Digital style */
-  background: transparent;
+  background: transparent; /* always — no tint, no frost */
 }
 
-/* Scroll state: subtle fade-in on header for very faint tint */
+/* .is-scrolled toggled by JS but adds no visual change to header.
+   Background only exists on the .nav-pill-group itself. */
 #site-header.is-scrolled {
-  background: rgba(249, 249, 247, 0.5);
+  background: transparent;
 }
 
 /* Override container within header to be full-width */
