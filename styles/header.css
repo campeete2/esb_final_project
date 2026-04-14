@@ -49,15 +49,18 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  height: 65px;           /* nav wrapper — taller for breathing room */
+  display: flex;
+  align-items: center;    /* pill sits centered within the 65px */
 }
 
 .nav-pill-group {
   display: flex;
   align-items: center;
-  gap: 4px;                   /* comfortable gap between items */
-  height: 44px;               /* slightly taller — matches Creme Digital visually */
+  gap: 4px;
+  height: 41px;               /* pill itself — 41px as requested */
   padding-inline: 6px;
-  background: rgba(235, 235, 235, 0.6);  /* exact Creme Digital value */
+  background: rgba(235, 235, 235, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: 100px;
   list-style: none;
