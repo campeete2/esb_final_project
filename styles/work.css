@@ -11,8 +11,7 @@
 .work-hero-inner h1 { margin-bottom: var(--space-5); line-height: 1.04; }
 .work-hero-inner p { font-size: var(--text-lg); font-weight: var(--weight-light); max-width: 52ch; }
 
-/* ── Old sticky filter bar — REMOVED ───────────────────────── */
-#work-filter { display: none; }
+/* Sidebar filter layout replaces old sticky filter bar */
 
 /* ── Portfolio layout: left sidebar + right grid ─────────── */
 #portfolio-grid { padding-block: var(--space-16) var(--space-32); }

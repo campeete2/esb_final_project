@@ -7,7 +7,6 @@
     <meta name="description" content="Book a consultation with Empty Sandbox. Tell us about your project and we'll get back to you within one business day.">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/contact.css">
@@ -320,7 +319,6 @@
 
     <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
-    <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
     <script>
         document.getElementById('footer-year').textContent = new Date().getFullYear();
@@ -379,6 +377,13 @@
                 message:      form.querySelector('#message').value.trim(),
                 referral:     form.querySelector('#referral').value
             };
+
+            // Honeypot: if filled in, silently reject (bot)
+            var honeypot = form.querySelector('[name="_honeypot"]');
+            if (honeypot && honeypot.value) { return; }
+
+            // Add honeypot to payload for server-side check too
+            data['_honeypot'] = '';
 
             // ── Save to sessionStorage so response.html can display it ──
             sessionStorage.setItem('esb_submission', JSON.stringify({

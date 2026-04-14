@@ -7,7 +7,6 @@
     <meta name="description" content="Explore the portfolio of digital transformation projects, MVP builds, and custom tooling delivered by Empty Sandbox.">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.min.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/work.css">
@@ -76,23 +75,10 @@
                 <div class="work-hero-inner">
                     <span class="section-label">Our Portfolio</span>
                     <h1>Work we're proud to put our name on.</h1>
-                    <p>A selection of projects across MVP development, digital transformation, and custom tooling. each one scoped, built, and delivered by our team.</p>
+                    <p>A selection of projects across MVP development, digital transformation, and custom tooling, each one scoped, built, and delivered by our team.</p>
                 </div>
             </div>
         </section>
-
-        <!-- FILTER BAR ───────────────────────── -->
-        <div id="work-filter">
-            <div class="container">
-                <div class="filter-bar" role="group" aria-label="Filter portfolio by type">
-                    <span class="filter-label">Filter:</span>
-                    <button class="filter-btn active" data-filter="all" id="filter-all">All Work</button>
-                    <button class="filter-btn" data-filter="mvp" id="filter-mvp">MVP Build</button>
-                    <button class="filter-btn" data-filter="transform" id="filter-transform">Digital Transformation</button>
-                    <button class="filter-btn" data-filter="tooling" id="filter-tooling">Custom Tooling</button>
-                    <button class="filter-btn" data-filter="web" id="filter-web">Web Design</button>
-                </div>
-            </div>
         </div>
 
         <!-- PORTFOLIO LAYOUT: sidebar filter + grid -->
@@ -104,11 +90,11 @@
                     <aside class="filter-sidebar" aria-label="Filter portfolio">
                         <span class="filter-label">Filter</span>
                         <ul class="filter-sidebar-list" role="group">
-                            <li><button class="filter-btn active" data-filter="all" id="filter-all">All Work</button></li>
-                            <li><button class="filter-btn" data-filter="mvp" id="filter-mvp">MVP Build</button></li>
-                            <li><button class="filter-btn" data-filter="transform" id="filter-transform">Digital Transformation</button></li>
-                            <li><button class="filter-btn" data-filter="tooling" id="filter-tooling">Custom Tooling</button></li>
-                            <li><button class="filter-btn" data-filter="web" id="filter-web">Web Design</button></li>
+                            <li><button class="filter-btn active" data-filter="all" id="sidebar-filter-all">All Work</button></li>
+                            <li><button class="filter-btn" data-filter="mvp" id="sidebar-filter-mvp">MVP Build</button></li>
+                            <li><button class="filter-btn" data-filter="transform" id="sidebar-filter-transform">Digital Transformation</button></li>
+                            <li><button class="filter-btn" data-filter="tooling" id="sidebar-filter-tooling">Custom Tooling</button></li>
+                            <li><button class="filter-btn" data-filter="web" id="sidebar-filter-web">Web Design</button></li>
                         </ul>
                     </aside>
 
@@ -341,7 +327,6 @@
 
     <!-- Scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
-    <script src="helpers/vendor/slicknav.min.js"></script>
     <script src="helpers/main.js"></script>
     <script>
         document.getElementById('footer-year').textContent = new Date().getFullYear();
