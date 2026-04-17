@@ -1,15 +1,18 @@
-/* ============================================================
-   EMPTY SANDBOX — FOOTER CSS
-   Premium rounded card footer — whitespace around a dark card,
-   inspired by Creme Digital / Aloa
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Footer
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the site-wide footer card including brand
+    column, navigation columns, and copyright.
+*/
 
 #site-footer {
-  padding: var(--space-8);
+  padding: var(--section-gap) var(--space-8) var(--space-8);
   background-color: var(--color-bg);
 }
 
-/* ── The floating dark card ────────────────────────────────── */
+/* ===== The floating dark card ===== */
 .footer-card {
   background-color: #111111;
   border-radius: 28px;
@@ -17,7 +20,7 @@
   overflow: hidden;
 }
 
-/* ── Top row: brand + nav columns ─────────────────────────── */
+/* ===== Top row: brand + nav columns ===== */
 .footer-top {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
@@ -51,11 +54,11 @@
 }
 
 /* Nav columns */
-.footer-col h6 {
+.footer-col h3 {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: var(--weight-regular);
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: var(--space-5);
@@ -73,7 +76,7 @@
 .footer-col ul li a {
   font-size: var(--text-sm);
   font-weight: var(--weight-light);
-  color: rgba(255, 255, 255, 0.55);
+  color: #FFFFFF;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -82,7 +85,7 @@
   color: #FFFFFF;
 }
 
-/* ── Bottom row: copyright + tagline ──────────────────────── */
+/* ===== Bottom row: copyright + tagline ===== */
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -94,17 +97,17 @@
 .footer-copy {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-tagline {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.6);
   letter-spacing: 0.04em;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;

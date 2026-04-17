@@ -1,23 +1,24 @@
-/* ============================================================
-   EMPTY SANDBOX — HEADER CSS (Editorial)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Header
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the site-wide header including navigation,
+    logo, mobile menu, and hamburger toggle.
+*/
 
 #site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   height: var(--header-height);
-  /* Strong frosted glass — always readable over any content */
-  background: rgba(253, 253, 251, 0.92);
-  backdrop-filter: blur(16px) saturate(1.6);
-  -webkit-backdrop-filter: blur(16px) saturate(1.6);
-  transition: box-shadow 0.2s ease;
+  background: transparent; /* always - no tint, no frost */
 }
 
-/* Shadow appears once user scrolls — separates nav from content */
+/* .is-scrolled toggled by JS but adds no visual change to header.
+   Background only exists on the .nav-pill-group itself. */
 #site-header.is-scrolled {
-  box-shadow: 0 1px 0 rgba(0,0,0,0.06),
-              0 4px 20px rgba(0,0,0,0.05);
+  background: transparent;
 }
 
 /* Override container within header to be full-width */
@@ -33,7 +34,15 @@
   height: 100%;
 }
 
-/* ── Logo ─────────────────────────────────────────────── */
+/* ===== Logo pre-paint clip (set by inline head script via sessionStorage) ===== */
+#header-logo-svg {
+  clip-path: inset(0 var(--logo-init-crop, 0%) 0 0);
+}
+.js-logo-text-hidden #logo-text-paths {
+  opacity: 0;
+}
+
+/* ===== Logo ===== */
 .site-logo {
   display: flex;
   align-items: center;
@@ -48,7 +57,7 @@
   object-fit: contain;
 }
 
-/* ── Desktop Nav — Pill Group ──────────────────────────── */
+/* ===== Desktop Nav - Pill Group ===== */
 #main-menu {
   position: absolute;
   left: 50%;
@@ -58,30 +67,38 @@
 .nav-pill-group {
   display: flex;
   align-items: center;
-  gap: 2px;
-  background: rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.09);
-  border-radius: var(--radius-pill);
-  padding: 3px;
+  gap: 2px;                              /* gap managed by link padding now */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: rgba(235, 235, 235, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 100px;
   list-style: none;
   margin: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 .nav-pill-group li a {
-  display: block;
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  font-size: var(--text-sm);
-  font-weight: 500;              /* visible on any background */
-  color: var(--color-text-primary);  /* always dark — no fade */
+  display: flex;
+  align-items: center;
+  padding: 5px 16px;            /* horizontal padding = spacing + hover area */
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(19, 19, 20);
   text-decoration: none;
   white-space: nowrap;
+  line-height: 24px;
   transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .nav-pill-group li a:hover {
-  color: var(--color-text-primary);
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.7);  /* pill highlight on hover */
+  color: rgb(19, 19, 20);
 }
 
 .nav-pill-group li a.active {
@@ -91,31 +108,36 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-/* CTA inside the pill */
 .nav-pill-group .nav-cta-item {
-  margin-left: var(--space-1);
+  margin-left: 4px;
 }
 
 .nav-pill-group .nav-cta-item a {
-  background-color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  background-color: var(--color-accent);
   color: #FFFFFF;
-  font-weight: var(--weight-medium);
-  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 18px;       /* exact Creme Digital: 10px top/bottom, 18px sides */
+  line-height: 24px;        /* gives 10+24+10 = 44px ≈ 41px CTA height */
+  border-radius: 100px;
+  text-decoration: none;
 }
 
 .nav-pill-group .nav-cta-item a:hover {
-  background-color: #333333;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: var(--color-text-primary);
 }
 
-/* ── Header Right (toggle only on desktop) ─────────────── */
+/* ===== Header Right (toggle only on desktop) ===== */
 .header-right {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-/* ── Hamburger Toggle ──────────────────────────────────── */
+/* ===== Hamburger Toggle ===== */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -145,7 +167,7 @@
 .nav-toggle.is-open .nav-toggle-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-toggle.is-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Mobile Menu Overlay ───────────────────────────────── */
+/* ===== Mobile Menu Overlay ===== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -237,7 +259,7 @@
 
 .mobile-cta-btn:hover { background-color: #333; }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   #main-menu { display: none; }
   .nav-toggle { display: flex; }

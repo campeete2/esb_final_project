@@ -19,13 +19,13 @@
 
   var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
-  /* ── On the contact page: track visit + form submission ─── */
-  if (page === 'contact.html') {
+  // On the hire page: mark as visited
+  if (page === 'hire.html') {
     sessionStorage.setItem(KEY_VISITED, '1');
 
-    // Track Formspark fetch-submission success
+    // If form submits successfully, mark as submitted
     var origFetch = window.fetch;
-    window.fetch = function (url, opts) {
+    window.fetch = function (url) {
       return origFetch.apply(this, arguments).then(function (res) {
         if (String(url).indexOf('submit-form.com') !== -1 && res.ok) {
           sessionStorage.setItem(KEY_SUBMITTED, '1');
@@ -33,11 +33,11 @@
         return res;
       });
     };
-    return; // Don't run popup logic on the contact page itself
+    return; // Don't run popup logic on the hire page itself
   }
 
-  /* ── Don't show on response or contact pages ─────────────── */
-  if (page === 'response.html') return;
+  /* ── Don't show on response or hire pages ─────────────────── */
+  if (page === 'response.html' || page === 'hire.html') return;
 
   /* ── Only show if user came from contact but didn't submit ── */
   if (!sessionStorage.getItem(KEY_VISITED))   return;
@@ -103,10 +103,14 @@
   }
 
   /* ── Triggers ────────────────────────────────────────────── */
-  // Mouse leaving viewport from the top
+  // 1. Mouse leaving viewport from the top edge
   document.addEventListener('mouseleave', function (e) {
     if (e.clientY <= 5) showPopup();
   });
+
+  // 2. Auto-show after 5 s — catches users who navigate via link clicks
+  //    rather than moving the mouse to the top of the viewport
+  setTimeout(showPopup, 5000);
 
   /* ── Event handlers ──────────────────────────────────────── */
   var closeBtn = overlay.querySelector('#exit-modal-close');

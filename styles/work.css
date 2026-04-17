@@ -1,10 +1,15 @@
-/* ============================================================
-   EMPTY SANDBOX — WORK / PORTFOLIO PAGE CSS (Editorial)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Work/Portfolio Page
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the work page including hero, filter sidebar,
+    portfolio grid, and CTA.
+*/
 
 /* Hero */
 #work-hero {
-  padding-block: var(--space-32) var(--space-20);
+  padding-block: var(--space-24) var(--space-16);
 }
 
 .work-hero-inner { max-width: 720px; }
@@ -13,8 +18,8 @@
 
 /* Sidebar filter layout replaces old sticky filter bar */
 
-/* ── Portfolio layout: left sidebar + right grid ─────────── */
-#portfolio-grid { padding-block: var(--space-16) var(--space-32); }
+/* ===== Portfolio layout: left sidebar + right grid ===== */
+#portfolio-grid { padding-block: 0 var(--section-gap); }
 
 .portfolio-layout {
   display: grid;
@@ -23,7 +28,7 @@
   align-items: start;
 }
 
-/* ── Left filter sidebar ────────────────────────────────── */
+/* ===== Left filter sidebar ===== */
 .filter-sidebar {
   position: sticky;
   top: calc(var(--header-height) + var(--space-8));
@@ -77,7 +82,7 @@
   color: #FFFFFF;
 }
 
-/* ── Portfolio grid (right column) ──────────────────────── */
+/* ===== Portfolio grid (right column) ===== */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -193,9 +198,9 @@
 
 .portfolio-link:hover { color: var(--color-text-primary); gap: var(--space-2); }
 
-/* ── Work CTA — thick dark card ─────────────────────────── */
+/* ===== Work CTA - thick dark card ===== */
 #work-cta {
-  padding-block: var(--space-6) var(--space-8);
+  padding-block: var(--section-gap);
 }
 
 .work-cta-card {
@@ -222,7 +227,6 @@
   color: rgba(255,255,255,0.45);
   font-weight: var(--weight-light);
   font-size: var(--text-base);
-  max-width: 44ch;
   max-width: none;
 }
 
@@ -261,7 +265,7 @@
   color: #FFFFFF;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .portfolio-layout {
     grid-template-columns: 1fr;
@@ -272,7 +276,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: var(--space-2);
-    border-bottom: 1px solid var(--color-border);
     padding-bottom: var(--space-6);
     margin-bottom: var(--space-6);
   }

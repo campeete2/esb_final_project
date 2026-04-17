@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<!-- @author Cameron McCullough, Empty Sandbox Contact/Hire Page
+  Southern Illinois University
+  Developed 04-17-26, and date tested 04-17-26 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,23 +17,49 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/logo/emptysandbox-icon.svg" type="image/svg+xml">
     <link rel="preload" href="https://images.ctfassets.net/zdahadqndvwb/aTdjjkgBcQpmNyE3xkjfz/8e5479681f9d378bc77d112612e5a80c/emptysandbox-icon.svg" as="image" fetchpriority="high">
+    <script>
+      (function () {
+        try {
+          var S = 20, E = 200, C = 54.40;
+          var sy = +(sessionStorage.getItem('esb_scrollY') || 0);
+          var p = sy <= S ? 0 : sy >= E ? 1 : (sy - S) / (E - S);
+          p = p * p * (3 - 2 * p);
+          document.documentElement.style.setProperty('--logo-init-crop', (p * C).toFixed(2) + '%');
+          if (p >= 0.999) document.documentElement.classList.add('js-logo-text-hidden');
+        } catch (e) {}
+      }());
+    </script>
 </head>
 <body>
 
-    <!-- ══════════════════════════════════
-         SITE HEADER
-    ══════════════════════════════════ -->
+    <!-- site header -->
     <header id="site-header">
         <div class="container header-inner">
             <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
-                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+                <svg class="site-logo__img" id="header-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5000 2500">
+                  <g id="logo-text-paths">
+                    <path fill="#231f20" d="M2418.12,1407.04v-450.66h331.68v78.19h-239.99v96.56h220.94v79.55h-220.94v116.28h250.79v80.22h-342.49v-.14Z"/>
+                    <path fill="#231f20" d="M3170.49,1407.04v-202.58c0-20.39-4.73-36.87-14.32-49.56-9.45-12.69-22.15-19.04-38.08-19.04s-29.85,6.75-40.38,20.39c-10.67,13.64-15.94,30.52-15.94,50.91v199.87h-88.32v-201.23c0-13.64-.95-24.71-2.7-33.36-1.89-8.64-4.86-15.4-9.18-20.39-4.32-5-9.86-8.51-16.61-10.53-6.75-2.03-14.99-3.11-24.44-3.11-35.79,0-53.75,21.74-53.75,65.23v203.25h-88.32v-334.39h82.92v48.75c11.34-22.42,24.98-37.68,40.79-45.92,15.94-8.24,34.84-12.29,57.13-12.29,11.34,0,21.34.95,30.25,2.7,8.91,1.76,16.75,5,23.77,9.32,7.02,4.32,13.64,9.86,20.12,16.75,6.35,6.89,12.69,15.13,19.04,24.71,9.05-18.77,21.07-32.41,36.06-40.79,14.99-8.51,33.09-12.69,54.43-12.69,16.75,0,32.14,2.84,46.19,8.51,14.05,5.67,26.06,13.64,36.06,23.77,9.99,10.26,17.83,22.15,23.5,35.79,5.67,13.64,8.51,28.09,8.51,43.62v232.29h-86.7Z"/>
+                    <path fill="#231f20" d="M3292.03,1565.32v-492.8h84.95l.68,40.79c20.39-33.09,51.45-49.56,93.05-49.56,20.8,0,40.25,4.05,58.07,12.29,17.83,8.24,33.22,19.99,45.92,35.38,12.69,15.4,22.69,34.17,29.85,56.45,7.29,22.15,10.94,47.4,10.94,75.36,0,25.39-3.11,48.62-9.18,69.69-6.08,21.07-15.13,39.3-26.87,54.7-11.75,15.4-26.2,27.28-43.22,35.65-17.02,8.37-36.33,12.56-58.07,12.56-41.19,0-74.28-17.42-99.26-52.4v201.9h-86.97.14ZM3449.77,1340.33c50.78,0,76.17-34.44,76.17-103.31,0-29.98-7.02-54.29-21.07-73.06-14.05-18.77-32.14-28.23-54.43-28.23s-39.16,8.91-53.35,26.47c-14.18,17.56-21.34,40.79-21.34,69.28,0,72.52,24.71,108.72,74.01,108.72v.14Z"/>
+                    <path fill="#231f20" d="M3833.72,1186.77h81.57v95.21c0,17.69-2.57,34.57-7.83,50.64-5.27,16.07-13.37,30.39-24.44,42.81-11.07,12.42-25.12,22.28-42,29.58-16.88,7.29-37.14,10.94-60.64,10.94s-45.24-3.65-62.39-10.94c-17.15-7.29-31.33-17.02-42.41-29.17-11.07-12.29-19.04-26.47-24.04-42.81-5-16.34-7.43-33.49-7.43-51.59v-299h87.65v90.35h183.53v62.53h-183.53v137.35c0,21.34,3.92,37.68,11.75,49.29,7.83,11.48,20.8,17.29,38.89,17.29s30.52-5.67,38.89-17.02c8.37-11.34,12.56-27.42,12.56-48.21v-86.97l-.14-.27Z"/>
+                    <path fill="#231f20" d="M4160.68,1362.75c-6.35,14.99-17.83,26.6-34.3,34.98-16.61,8.37-35.25,12.56-56.05,12.56-17.69,0-34.03-2.84-48.89-8.51-14.99-5.67-27.82-13.78-38.76-24.44-10.94-10.67-19.31-23.36-25.52-38.08-6.08-14.72-9.18-31.33-9.18-49.97v-216.89h88.32v203.93c0,41.73,18.77,62.53,56.45,62.53,20.39,0,36.73-5.94,49.29-17.69,12.42-11.75,18.64-26.74,18.64-44.84v-203.93h88.32v343.3c0,23.5-3.92,44.57-11.88,63.2-7.97,18.5-18.77,34.17-32.68,46.86-13.78,12.69-30.12,22.42-48.89,29.17-18.77,6.75-38.89,10.13-60.1,10.13-49.43,0-86.3-12.56-110.74-37.68-24.44-25.12-36.73-59.42-36.73-102.91h82.25c0,19.99,5.81,35.52,17.29,46.86,11.61,11.34,28.9,17.02,51.99,17.02,8.1,0,15.94-1.62,23.09-5,7.29-3.38,13.64-8.1,19.31-14.18,5.67-6.08,10.13-13.64,13.51-22.69,3.38-9.05,5.13-18.91,5.13-29.71v-54.02h.13Z"/>
+                    <path fill="#231f20" d="M2673.5,1696.86c-2.3-23.09-10.67-40.38-25.25-51.59-14.59-11.21-36.33-17.02-65.36-17.02-53.62,0-80.36,18.37-80.36,54.97,0,13.1,5.54,24.17,16.75,32.95,11.07,8.91,28.9,16.21,53.48,22.15,29.04,6.75,54.29,13.1,75.63,19.04,21.34,5.94,40.79,12.69,58.61,20.39,9.99,4.05,19.45,9.18,28.23,15.26,8.91,6.08,16.34,13.78,22.42,22.82,6.08,9.05,10.94,19.99,14.59,32.55,3.65,12.69,5.4,28.09,5.4,46.19,0,21.74-4.59,41.06-13.64,57.8-9.05,16.75-21.34,30.93-36.73,42.54-15.4,11.61-33.49,20.39-54.43,26.47-20.93,6.08-42.81,9.18-65.9,9.18-65.63,0-115.06-12.83-148.15-38.35-33.09-25.52-50.51-63.34-52.4-113.17h91.02c.41,23.09,9.86,41.33,28.23,54.7s41.33,20.12,69.01,20.12c29.85,0,52.53-5.4,67.93-16.34,15.4-10.94,23.09-25.52,23.09-44.03,0-7.29-.95-13.91-2.7-19.99-1.76-6.08-5.27-11.61-10.53-16.61-5.27-5-12.42-9.32-21.47-13.23-9.05-3.78-20.93-7.29-35.52-10.53-34.57-7.29-64.42-14.59-89.54-22.01-25.25-7.43-46.05-16.75-62.39-27.82-16.34-11.07-28.36-24.58-36.06-40.38-7.7-15.8-11.61-35.92-11.61-60.37,0-18.5,3.38-35.92,10.26-52.26,6.75-16.21,17.15-30.39,31.33-42.41,14.18-12.02,31.47-21.47,52.13-28.5,20.66-7.02,45.11-10.53,73.2-10.53s51.72,3.51,73.47,10.53c21.74,7.02,40.52,17.02,56.18,29.85,15.67,12.83,27.82,28.5,36.46,46.86,8.64,18.37,13.37,38.62,14.32,60.77h-89.81.14Z"/>
+                    <path fill="#231f20" d="M3008.7,2014.91c-2.7-8.64-4.46-18.5-5.4-29.85-10.4,11.75-24.31,21.2-41.46,28.23-17.15,7.02-37.14,10.53-59.83,10.53-38.49,0-66.72-8.51-84.54-25.52-17.96-17.02-26.87-39.03-26.87-66.31,0-24.04,3.78-43.22,11.48-57.4,7.7-14.32,18.37-25.52,32.01-33.63,13.51-8.1,29.71-14.18,48.62-17.96,18.91-3.78,39.3-7.29,61.58-10.53,22.15-3.11,37.14-7.29,44.84-12.56,7.7-5.27,11.48-13.78,11.48-25.52,0-10.94-5.13-19.31-15.26-25.52-10.13-6.08-23.9-9.18-41.19-9.18-20.39,0-34.98,4.46-43.76,13.51-8.91,9.05-14.45,21.07-16.61,36.06h-82.25c.41-17.15,3.24-33.09,8.51-47.54,5.27-14.45,13.51-27.01,25.12-37.41,11.48-10.4,26.61-18.5,45.11-24.17,18.5-5.67,41.19-8.51,67.8-8.51s48.48,2.97,66.72,8.78c18.23,5.94,32.95,14.45,44.03,25.52,11.07,11.07,19.04,24.98,24.04,41.46,5,16.61,7.43,35.25,7.43,56.05v211.35h-81.57v.13ZM3002.62,1851.09c-4.59,4.59-11.07,8.1-19.72,10.94-8.64,2.84-21.07,5.67-37.41,8.91-25.39,5-42.81,11.34-52.4,19.04-9.45,7.7-14.32,18.77-14.32,33.36,0,24.85,14.32,37.41,42.81,37.41,11.34,0,21.88-1.89,31.6-5.81,9.72-3.92,18.1-9.05,25.12-15.67,7.02-6.62,12.69-14.32,17.02-23.09,4.32-8.91,6.48-18.23,6.48-28.23l.68-36.73.13-.13Z"/>
+                    <path fill="#231f20" d="M3340.38,2014.91v-202.58c0-25.79-4.32-43.22-12.96-52.26-8.64-9.05-23.36-13.64-44.16-13.64-45.78,0-68.61,25.52-68.61,76.84v191.64h-88.32v-334.39h84.27v48.75c10.4-19.18,24.17-33.63,41.33-43.49s39.3-14.72,66.45-14.72c15.8,0,30.52,2.43,44.03,7.16,13.51,4.73,25.12,11.88,34.84,21.47,9.72,9.59,17.42,21.2,23.09,35.11,5.67,13.91,8.51,29.85,8.51,47.94v232.29h-88.32l-.14-.14Z"/>
+                    <path fill="#231f20" d="M3696.51,2014.91l-.68-40.79c-20.39,33.09-51.45,49.56-93.05,49.56-21.34,0-40.79-4.05-58.48-12.29-17.69-8.1-32.82-19.99-45.51-35.38-12.69-15.4-22.69-34.17-29.85-56.45-7.29-22.15-10.94-47.4-10.94-75.49,0-25.39,3.11-48.62,9.18-69.69,6.08-21.07,15.13-39.3,26.87-54.7,11.75-15.4,26.2-27.28,43.22-35.65,17.02-8.37,36.33-12.56,58.07-12.56,41.19,0,74.28,17.42,99.26,52.4v-165.84h86.97v456.74h-84.95l-.14.14ZM3623.04,1951.7c21.34,0,39.03-8.78,53.35-26.47,14.32-17.69,21.34-40.79,21.34-69.28,0-72.52-24.71-108.72-74.01-108.72s-76.17,34.44-76.17,103.31c0,29.85,7.02,54.29,21.07,73.06,14.05,18.77,32.14,28.23,54.43,28.23v-.14Z"/>
+                    <path fill="#231f20" d="M3816.84,2014.91v-456.74h86.97v165.84c24.98-34.84,58.07-52.4,99.26-52.4,21.74,0,41.19,4.19,58.07,12.56,17.02,8.37,31.33,20.26,43.22,35.65,11.75,15.4,20.66,33.63,26.87,54.7,6.08,21.07,9.18,44.3,9.18,69.69,0,28.09-3.65,53.21-10.94,75.49-7.29,22.28-17.15,41.06-29.85,56.45-12.69,15.4-27.96,27.15-45.92,35.38-17.96,8.24-37.27,12.29-58.07,12.29-41.73,0-72.79-16.61-93.05-49.56l-.68,40.79h-84.95l-.13-.14ZM3975.12,1951.7c22.15,0,40.38-9.32,54.43-28.23,14.04-18.77,21.07-43.22,21.07-73.06,0-68.88-25.39-103.31-76.17-103.31s-74.01,36.19-74.01,108.72c0,28.5,7.16,51.59,21.34,69.28,14.18,17.69,32.01,26.47,53.35,26.47v.14Z"/>
+                    <path fill="#231f20" d="M4333.68,2023.82c-27.15,0-51.32-4.32-72.52-12.97-21.2-8.64-39.17-20.66-53.89-36.06-14.72-15.4-25.93-34.03-33.63-55.78-7.7-21.74-11.48-45.65-11.48-71.44s3.92-50.37,11.88-72.12,19.31-40.38,34.3-55.78c14.86-15.4,32.95-27.42,53.89-35.79,20.93-8.37,44.84-12.56,71.58-12.56s49.7,4.19,70.5,12.56c20.8,8.37,38.49,20.26,53.21,35.38,14.72,15.26,26.06,33.76,33.9,55.51,7.83,21.74,11.88,46.05,11.88,72.79s-3.92,50.91-11.88,72.52c-7.97,21.61-19.18,40.11-33.9,55.51-14.72,15.4-32.55,27.42-53.61,35.79s-44.43,12.56-70.23,12.56v-.13ZM4333.95,1949.68c53.89,0,80.9-34.03,80.9-101.96s-27.01-101.29-80.9-101.29-80.9,33.76-80.9,101.29,26.87,101.96,80.9,101.96Z"/>
+                    <path fill="#231f20" d="M4708.44,2014.91l-58.48-100.61-57.13,100.61h-106.01l112.09-170.57-108.72-163.82h106.69l56.45,97.24,57.13-97.24h102.64l-110.74,163.82,114.12,170.57h-108.04Z"/>
+                  </g>
+                  <path class="logo-icon-path" fill="#a855f7" d="M2279.7,2030.57V895.34l-482.83-425.91H183.51v1087.54l436.51,473.6h1659.67ZM2218.07,1969.14H681.65v-1012.76h1536.41v1012.76Z"/>
+                </svg>
             </a>
             <nav id="main-menu" aria-label="Main Navigation">
                 <ul class="nav-pill-group">
                     <li><a href="work.html">Work</a></li>
                     <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
-                                    <li class="nav-cta-item"><a href="contact.html" id="header-cta-btn">Book a Call</a></li>
+                    <li class="nav-cta-item"><a href="hire.html" id="header-cta-btn">Book a Call</a></li>
                 </ul>
             </nav>
             <div class="header-right">
@@ -44,8 +74,8 @@
             <div class="mobile-menu-inner">
                 <div class="mobile-menu-top">
                     <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
-                <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
-            </a>
+                        <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
+                    </a>
                     <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close navigation">&#x2715;</button>
                 </div>
                 <nav class="mobile-nav" aria-label="Mobile Navigation">
@@ -54,45 +84,43 @@
                         <li><a href="work.html">Work</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="hire.html" class="active">Contact</a></li>
                     </ul>
                 </nav>
-                <a href="contact.html" class="mobile-cta-btn">Book a Call</a>
+                <a href="hire.html" class="mobile-cta-btn">Book a Call</a>
             </div>
         </div>
     </header>
 
-    <!-- ══════════════════════════════════
-         MAIN CONTENT
-    ══════════════════════════════════ -->
+    <!-- main content -->
     <main id="contact-content">
 
-        <!-- PAGE HERO ────────────────────────── -->
+        <!-- page hero -->
         <section id="contact-hero">
             <div class="contact-hero-orb" aria-hidden="true"></div>
             <div class="container">
                 <div class="contact-hero-inner">
-                    <span class="section-label">Get In Touch</span>
+
                     <h1>Let's talk about your project.</h1>
                     <p>Whether you have a fully scoped idea or just a problem worth solving. fill out the form and we'll respond within one business day.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT FORM + SIDEBAR ───────────── -->
+        <!-- contact form and sidebar -->
         <section id="contact-main">
             <div class="container">
                 <div class="contact-layout">
 
-                    <!-- FORM CARD ──────────────── -->
+                    <!-- form card -->
                     <div class="contact-form-card" data-reveal>
                         <h2>Book a Discovery Call</h2>
                         <p>Tell us what you're working on. All fields marked <span style="color:var(--color-accent);">*</span> are required.</p>
 
                         <!--
-                            FORMSPARK INTEGRATION:
-                            Replace YOUR_FORM_ID with your actual Formspark form ID.
-                            After submission, Formspark will redirect to response.html.
+                            formspark integration:
+                            replace your_form_id with your actual formspark form id.
+                            after submission, formspark will redirect to response.html.
                         -->
                         <form
                             id="contact-form"
@@ -101,12 +129,12 @@
                             method="POST"
                             novalidate
                         >
-                            <!-- Honeypot: do not remove -->
+                            <!-- honeypot: do not remove -->
 
-                            <!-- Honeypot spam protection -->
+                            <!-- honeypot spam protection -->
                             <input type="text" name="_honeypot" style="display:none;" tabindex="-1" autocomplete="off">
 
-                            <!-- Name row -->
+                            <!-- name row -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="first-name">First Name <span class="required" aria-hidden="true">*</span></label>
@@ -134,7 +162,7 @@
                                 </div>
                             </div>
 
-                            <!-- Email & Organization row -->
+                            <!-- email & organization row -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
@@ -161,7 +189,7 @@
                                 </div>
                             </div>
 
-                            <!-- Project type & budget row -->
+                            <!-- project type & budget row -->
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="project-type">Project Type <span class="required" aria-hidden="true">*</span></label>
@@ -188,7 +216,7 @@
                                 </div>
                             </div>
 
-                            <!-- Message -->
+                            <!-- message -->
                             <div class="form-group">
                                 <label for="message">Tell us about your project <span class="required" aria-hidden="true">*</span></label>
                                 <textarea
@@ -202,7 +230,7 @@
                                 <span class="form-hint">Aim for 2–4 sentences. No need to have all the answers yet!</span>
                             </div>
 
-                            <!-- How did you hear about us -->
+                            <!-- how did you hear about us -->
                             <div class="form-group">
                                 <label for="referral">How did you hear about us?</label>
                                 <select id="referral" name="referral" class="form-control">
@@ -215,7 +243,7 @@
                                 </select>
                             </div>
 
-                            <!-- Submit -->
+                            <!-- submit -->
                             <div class="form-submit">
                                 <button type="submit" class="btn btn--accent" id="contact-submit-btn">
                                     Send My Request &rarr;
@@ -227,12 +255,12 @@
                         </form>
                     </div>
 
-                    <!-- SIDEBAR ────────────────── -->
+                    <!-- sidebar -->
                     <aside class="contact-sidebar">
 
-                        <!-- Info card -->
+                        <!-- info card -->
                         <div class="contact-info-card" data-reveal>
-                            <h5>What to bring to the call</h5>
+                            <h3>What to bring to the call</h3>
                             <ul class="contact-info-list">
                                 <li>
                                     
@@ -255,7 +283,7 @@
 
                         <!-- What to expect card -->
                         <div class="expect-card" data-reveal>
-                            <h5>What happens next</h5>
+                            <h3>What happens next</h3>
                             <ol class="expect-steps">
                                 <li>We review your submission and research your project.</li>
                                 <li>We reach out within one business day to schedule a call.</li>
@@ -272,7 +300,7 @@
 
     </main>
 
-    <!-- FOOTER. Rounded floating card -->
+    <!-- footer -->
     <footer id="site-footer">
         <div class="footer-card">
             <div class="footer-top">
@@ -280,31 +308,22 @@
                     <a href="index.html" class="site-logo" aria-label="Empty Sandbox Home">
                         <img src="assets/logo/emptysandbox-primary.svg" alt="Empty Sandbox" class="site-logo__img">
                     </a>
-                    <p>A consultancy and product studio. We design, build, and ship digital products for founders, businesses, and organizations. structure and clarity.</p>
+
                 </div>
                 <div class="footer-col">
-                    <h6>Pages</h6>
+                    <h3>Pages</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="work.html">Work</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="hire.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h6>Services</h6>
+                    <h3>Get Started</h3>
                     <ul>
-                        <li><a href="pricing.html">MVP Development</a></li>
-                        <li><a href="pricing.html">Digital Transformation</a></li>
-                        <li><a href="pricing.html">Custom Tooling</a></li>
-                        <li><a href="pricing.html">Strategy &amp; Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h6>Get Started</h6>
-                    <ul>
-                        <li><a href="contact.html">Book a Call</a></li>
+                        <li><a href="hire.html">Book a Call</a></li>
                         <li><a href="pricing.html">View Pricing</a></li>
                         <li><a href="work.html">See Our Work</a></li>
                     </ul>
@@ -317,7 +336,7 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- scripts -->
     <script src="helpers/vendor/jquery.min.js"></script>
     <script src="helpers/main.js"></script>
     <script>
