@@ -1,0 +1,580 @@
+/*
+    CSS Stylesheet - Empty Sandbox How We Work Section
+    Developed by: Cameron McCullough
+    Created: 04-17-26
+    Updated: 04-17-26
+    Description: Styles for the How We Work scroll-stacked cards section.
+*/
+
+/* ===== Section wrapper ===== */
+#how-we-work {
+  padding-block: var(--section-gap) 0;
+  margin-bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    #08050e 0%,
+    #1a0940 8%,
+    #3a1c96 14%,
+    var(--hww-mid, #e8dafc) 28%,
+    var(--hww-mid, #e8dafc) 78%,
+    var(--color-bg) 100%
+  );
+  position: relative;
+  z-index: 0;                  /* creates stacking context */
+  overflow: visible;           /* allow sticky to work */
+}
+
+/* White overlay div - JS sets opacity directly to fade dark bg to white.
+   Cards (z-index 1-6) paint above this overlay. */
+#hww-bg-overlay {
+  display: none;
+}
+
+/* ===== Intro header ===== */
+.hww-intro {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  padding-bottom: var(--space-20);
+  color: #ffffff;
+}
+
+.hww-intro p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.hww-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+  max-width: none;
+}
+
+.hww-intro h2 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(var(--text-3xl), 4.5vw, var(--text-5xl));
+  line-height: 1.08;
+}
+
+.hww-intro h2 em {
+  color: rgba(255, 255, 255, 0.45);
+  font-style: italic;
+}
+
+/* ===== Card stack container - tall to give scroll room ===== */
+.hww-stack {
+  position: relative;
+  padding-inline: clamp(var(--space-5), 5vw, var(--space-16));
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-bottom: 0;
+}
+
+/* Invisible spacer after last card - gives it scroll room to fully pin */
+.hww-spacer {
+  height: 30vh;
+  pointer-events: none;
+}
+
+/* ===== Individual card ===== */
+
+.hww-card {
+  background: #ffffff;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04), 0 24px 64px rgba(0,0,0,0.12);
+
+  /* Sticky: each card pins at its top offset */
+  position: sticky;
+
+  /* Default scale — JS will manipulate via inline styles */
+  transform-origin: center top;
+  will-change: transform, opacity;
+  transition: transform 0.15s ease-out, opacity 0.15s ease-out;
+
+  margin-bottom: 30vh;
+}
+
+/* Last card: no bottom margin — spacer handles the scroll room */
+.hww-card:last-of-type {
+  margin-bottom: 0;
+}
+
+
+/* Stagger each card's sticky offset so they visually stack */
+#hww-s1 { top: 140px; z-index: 1; }
+#hww-s2 { top: 148px; z-index: 2; }
+#hww-s3 { top: 156px; z-index: 3; }
+#hww-s4 { top: 164px; z-index: 4; }
+#hww-s5 { top: 172px; z-index: 5; }
+#hww-s6 { top: 180px; z-index: 6; }
+
+/* ===== Card inner layout (left / right) ===== */
+.hww-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 600px;
+}
+
+/* ===== Left: text content ===== */
+.hww-left {
+  padding: clamp(var(--space-10), 5vw, var(--space-16));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.hww-step-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  width: fit-content;
+}
+
+.hww-step-tag svg {
+  color: var(--color-accent);
+  fill: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.hww-left h3 {
+  font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
+  font-weight: var(--weight-light);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+
+.hww-left p {
+  font-size: var(--text-base);
+  font-weight: var(--weight-light);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 42ch;
+}
+
+/* ===== Right: visual panel ===== */
+.hww-right {
+  position: relative;
+  overflow: hidden;
+}
+
+.hww-visual {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hww-visual-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+}
+
+/* ===== Visual backgrounds per step ===== */
+.hww-visual--discover {
+  background: linear-gradient(135deg, rgba(200, 170, 255, 0) 0%, rgba(200, 170, 255, 0.18) 100%);
+}
+.hww-visual--build {
+  background: linear-gradient(135deg, rgba(160, 200, 255, 0) 0%, rgba(160, 200, 255, 0.18) 100%);
+}
+.hww-visual--iterate {
+  background: linear-gradient(135deg, rgba(140, 255, 190, 0) 0%, rgba(140, 255, 190, 0.18) 100%);
+}
+.hww-visual--collab {
+  background: linear-gradient(135deg, rgba(255, 190, 110, 0) 0%, rgba(255, 190, 110, 0.18) 100%);
+}
+.hww-visual--consult {
+  background: linear-gradient(135deg, rgba(80, 220, 255, 0) 0%, rgba(80, 220, 255, 0.18) 100%);
+}
+.hww-visual--sprint {
+  background: linear-gradient(135deg, rgba(255, 140, 195, 0) 0%, rgba(255, 140, 195, 0.18) 100%);
+}
+
+/* ===== Flip modifier - swaps visual to left, text to right ===== */
+.hww-card--flip .hww-left  { order: 2; }
+.hww-card--flip .hww-right { order: 1; }
+
+/* ===== Floating chips (decorative callouts) ===== */
+.hww-floating-chip {
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+.chip-1 { bottom: 18%; left: 10%; }
+.chip-2 { top: 14%;  right: 8%; }
+.chip-3 { bottom: 16%; left: 6%; }
+
+/* ===== DISCOVER: Document mockup ===== */
+.hww-doc-mock {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.06);
+  width: min(340px, 85%);
+  overflow: hidden;
+}
+
+.doc-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  background: #fafaf9;
+}
+
+.doc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+}
+.doc-dot:nth-child(1) { background: #fc5c57; }
+.doc-dot:nth-child(2) { background: #fdbc40; }
+.doc-dot:nth-child(3) { background: #34c749; }
+
+.doc-title {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  margin-left: var(--space-2);
+}
+
+.doc-body {
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.doc-line {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(0,0,0,0.07);
+}
+.doc-line--full  { width: 100%; }
+.doc-line--3q    { width: 75%; }
+.doc-line--half  { width: 50%; }
+.doc-line--label {
+  height: auto;
+  background: none;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+/* ===== BUILD: Sprint board ===== */
+.hww-sprint-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: min(400px, 90%);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+}
+
+.sprint-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sprint-label {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sprint-card {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: var(--text-xs);
+  color: var(--color-text-primary);
+  font-weight: var(--weight-regular);
+}
+
+.sprint-card--active {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.sprint-card--done {
+  opacity: 0.55;
+}
+
+.sprint-tag {
+  display: inline-block;
+  font-size: 9px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  padding: 2px 6px;
+  width: fit-content;
+}
+
+.sprint-tag--design {
+  background: rgba(236, 72, 153, 0.12);
+  color: #9d174d;
+}
+
+.sprint-tag--dev {
+  background: rgba(139, 92, 246, 0.12);
+  color: #5b21b6;
+}
+
+/* ===== ITERATE: Roadmap ===== */
+.hww-roadmap {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  width: min(380px, 88%);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.roadmap-row {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.roadmap-row:last-child { border-bottom: none; }
+
+.roadmap-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+  border: 2px solid transparent;
+  flex-shrink: 0;
+  justify-self: center;
+}
+
+.roadmap-dot--done {
+  background: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.roadmap-dot--active {
+  background: var(--color-accent);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+  animation: roadmap-pulse 2s ease-in-out infinite;
+}
+
+@keyframes roadmap-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15); }
+  50%       { box-shadow: 0 0 0 8px rgba(139, 92, 246, 0.06); }
+}
+
+.roadmap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.roadmap-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+}
+
+.roadmap-meta {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+}
+
+.roadmap-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.roadmap-badge--done {
+  background: #f0fdf4;
+  color: #16a34a;
+  border-color: #bbf7d0;
+}
+
+.roadmap-badge--active {
+  background: rgba(139, 92, 246, 0.08);
+  color: var(--color-accent);
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+/* ===== COLLAB: Chat UI ===== */
+.hww-collab-ui {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  width: min(380px, 88%);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.collab-update {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.collab-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.collab-avatar--1 {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: #fff;
+}
+
+.collab-avatar--2 {
+  background: #f0f0ee;
+  color: var(--color-text-secondary);
+}
+
+.collab-message {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.collab-name {
+  font-size: 12px;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+}
+
+.collab-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--weight-light);
+  line-height: 1.5;
+  max-width: none;
+}
+
+.collab-time {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+.collab-input {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-light);
+  cursor: text;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hww-card-inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hww-card--flip .hww-left,
+  .hww-card--flip .hww-right { order: unset; }
+
+  .hww-right {
+    height: 320px;
+    position: relative;
+    min-height: 280px;
+  }
+
+  .hww-visual {
+    position: absolute;
+  }
+
+  /* On mobile, disable sticky stacking and revert to normal flow */
+  #hww-s1, #hww-s2, #hww-s3, #hww-s4, #hww-s5, #hww-s6 {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hww-stack {
+    padding-inline: var(--space-4);
+  }
+
+  .hww-right {
+    height: 260px;
+  }
+
+  .hww-sprint-board {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sprint-col:last-child {
+    display: none;
+  }
+}

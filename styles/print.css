@@ -1,10 +1,13 @@
-/* ============================================================
-   EMPTY SANDBOX — PRINT STYLESHEET
-   Applied only when printing (Home page primarily)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Print Styles
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Print styles for the home page.
+*/
 
 @media print {
-  /* ── Hide interactive / decorative elements ── */
+  /* ===== Hide interactive / decorative elements ===== */
   #site-header,
   #site-footer,
   .btn,
@@ -19,13 +22,13 @@
     display: none !important;
   }
 
-  /* ── Page setup ── */
+  /* ===== Page setup ===== */
   @page {
     margin: 1in;
     size: letter portrait;
   }
 
-  /* ── Reset backgrounds and colors ── */
+  /* ===== Reset backgrounds and colors ===== */
   *,
   *::before,
   *::after {
@@ -42,7 +45,7 @@
     color: #000;
   }
 
-  /* ── Typography ── */
+  /* ===== Typography ===== */
   h1 {
     font-size: 22pt;
     margin-bottom: 12pt;
@@ -69,7 +72,7 @@
     margin-bottom: 8pt;
   }
 
-  /* ── Links ── */
+  /* ===== Links ===== */
   a[href]::after {
     content: " (" attr(href) ")";
     font-size: 9pt;
@@ -81,7 +84,7 @@
     content: "";
   }
 
-  /* ── Layout reset ── */
+  /* ===== Layout reset ===== */
   .container {
     max-width: 100%;
     padding: 0;
@@ -93,7 +96,7 @@
     padding: 0;
   }
 
-  /* ── Services section ── */
+  /* ===== Services section ===== */
   .services-grid {
     display: block;
   }
@@ -110,7 +113,7 @@
     display: none;
   }
 
-  /* ── Why ESB section ── */
+  /* ===== Why ESB section ===== */
   .why-grid {
     display: block;
   }
@@ -126,7 +129,7 @@
     page-break-inside: avoid;
   }
 
-  /* ── Section labels ── */
+  /* ===== Section labels ===== */
   .section-label {
     font-size: 8pt;
     text-transform: uppercase;
@@ -138,7 +141,7 @@
     display: none;
   }
 
-  /* ── Hero section ── */
+  /* ===== Hero section ===== */
   #hero {
     min-height: auto;
     padding: 0 0 16pt 0;

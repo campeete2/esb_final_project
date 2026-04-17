@@ -20,12 +20,12 @@
   var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
   // On the hire page: mark as visited
-  if (page === 'higher.html') {
+  if (page === 'hire.html') {
     sessionStorage.setItem(KEY_VISITED, '1');
 
     // If form submits successfully, mark as submitted
     var origFetch = window.fetch;
-    window.fetch = function (url, opts) {
+    window.fetch = function (url) {
       return origFetch.apply(this, arguments).then(function (res) {
         if (String(url).indexOf('submit-form.com') !== -1 && res.ok) {
           sessionStorage.setItem(KEY_SUBMITTED, '1');
@@ -37,7 +37,7 @@
   }
 
   /* ── Don't show on response or hire pages ─────────────────── */
-  if (page === 'response.html' || page === 'higher.html') return;
+  if (page === 'response.html' || page === 'hire.html') return;
 
   /* ── Only show if user came from contact but didn't submit ── */
   if (!sessionStorage.getItem(KEY_VISITED))   return;

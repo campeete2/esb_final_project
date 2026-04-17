@@ -1,13 +1,18 @@
-/* ============================================================
-   EMPTY SANDBOX — HEADER CSS (Editorial)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Header
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the site-wide header including navigation,
+    logo, mobile menu, and hamburger toggle.
+*/
 
 #site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   height: var(--header-height);
-  background: transparent; /* always — no tint, no frost */
+  background: transparent; /* always - no tint, no frost */
 }
 
 /* .is-scrolled toggled by JS but adds no visual change to header.
@@ -29,7 +34,15 @@
   height: 100%;
 }
 
-/* ── Logo ─────────────────────────────────────────────── */
+/* ===== Logo pre-paint clip (set by inline head script via sessionStorage) ===== */
+#header-logo-svg {
+  clip-path: inset(0 var(--logo-init-crop, 0%) 0 0);
+}
+.js-logo-text-hidden #logo-text-paths {
+  opacity: 0;
+}
+
+/* ===== Logo ===== */
 .site-logo {
   display: flex;
   align-items: center;
@@ -44,7 +57,7 @@
   object-fit: contain;
 }
 
-/* ── Desktop Nav — Pill Group ──────────────────────────── */
+/* ===== Desktop Nav - Pill Group ===== */
 #main-menu {
   position: absolute;
   left: 50%;
@@ -102,7 +115,7 @@
 .nav-pill-group .nav-cta-item a {
   display: flex;
   align-items: center;
-  background-color: rgb(19, 19, 20);
+  background-color: var(--color-accent);
   color: #FFFFFF;
   font-weight: 500;
   font-size: 16px;
@@ -113,18 +126,18 @@
 }
 
 .nav-pill-group .nav-cta-item a:hover {
-  background-color: var(--color-accent);
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: var(--color-text-primary);
 }
 
-/* ── Header Right (toggle only on desktop) ─────────────── */
+/* ===== Header Right (toggle only on desktop) ===== */
 .header-right {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-/* ── Hamburger Toggle ──────────────────────────────────── */
+/* ===== Hamburger Toggle ===== */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -154,7 +167,7 @@
 .nav-toggle.is-open .nav-toggle-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-toggle.is-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-/* ── Mobile Menu Overlay ───────────────────────────────── */
+/* ===== Mobile Menu Overlay ===== */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -246,7 +259,7 @@
 
 .mobile-cta-btn:hover { background-color: #333; }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
   #main-menu { display: none; }
   .nav-toggle { display: flex; }

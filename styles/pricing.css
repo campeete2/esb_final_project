@@ -1,10 +1,14 @@
-/* ============================================================
-   EMPTY SANDBOX — PRICING PAGE CSS (Editorial)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Pricing Page
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the pricing page including hero, tier cards, and CTA.
+*/
 
 /* Hero */
 #pricing-hero {
-  padding-block: var(--space-32) var(--space-20);
+  padding-block: var(--space-24) var(--space-16);
 }
 
 .pricing-hero-inner { max-width: 640px; }
@@ -21,12 +25,17 @@
 }
 
 /* Pricing Grid */
+#pricing-tiers {
+  padding-block: 0 var(--section-gap);
+}
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-4);
   align-items: start;
+  max-width: 880px;
+  margin-inline: auto;
 }
 
 /* Pricing Card */
@@ -36,17 +45,24 @@
   border: 1px solid var(--color-border);
   padding: var(--space-8);
   position: relative;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-base), border-color var(--transition-fast), box-shadow var(--transition-base);
 }
 
 .pricing-card:hover {
   border-color: var(--color-border-strong);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10), 0 4px 16px rgba(0,0,0,0.06);
+  transform: translateY(-8px);
 }
 
 .pricing-card--featured {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 1px var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.pricing-card--featured:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent), 0 16px 48px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.07);
+  transform: translateY(-8px);
 }
 
 .pricing-featured-badge {
@@ -144,7 +160,7 @@
 
 /* Audience */
 #audience-match {
-  padding-block: var(--space-32);
+  padding-block: var(--section-gap);
 }
 
 .audience-match-grid {
@@ -167,7 +183,7 @@
   margin-bottom: var(--space-3);
 }
 
-.audience-card h5 {
+.audience-card h4 {
   font-size: var(--text-base);
   font-weight: var(--weight-medium);
   margin-bottom: var(--space-3);
@@ -183,6 +199,9 @@
 }
 
 /* FAQ */
+#pricing-faq {
+  padding-block: var(--section-gap);
+}
 
 .faq-header { max-width: 480px; margin-bottom: var(--space-12); }
 .faq-header h2 { margin-bottom: var(--space-4); }
@@ -241,7 +260,7 @@
 
 /* Pricing CTA */
 #pricing-cta {
-  padding-block: var(--space-32);
+  padding-block: var(--section-gap);
 }
 
 .pricing-cta-inner,

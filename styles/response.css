@@ -1,15 +1,17 @@
-/* ============================================================
-   EMPTY SANDBOX — RESPONSE PAGE CSS (Editorial)
-   ============================================================ */
+/*
+    CSS Stylesheet - Empty Sandbox Response Page
+    Developed by: Cameron McCullough
+    Created: 04-13-26
+    Updated: 04-17-26
+    Description: Styles for the form response / thank you page.
+*/
 
 #response-content {
-  min-height: calc(100vh - var(--header-height) - 240px);
-  display: flex;
-  align-items: center;
+  padding-block: var(--section-gap);
 }
 
 #response-main {
-  padding-block: var(--space-32);
+  padding-block: 0;
   width: 100%;
 }
 
@@ -66,7 +68,7 @@
   margin-bottom: var(--space-6);
 }
 
-.response-next-card h5 {
+.response-next-card h2 {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
   font-weight: var(--weight-regular);
